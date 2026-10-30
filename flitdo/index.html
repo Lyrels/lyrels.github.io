@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Flitdo — Capture it. Get it done.</title>
+  <meta name="title-en" content="Flitdo — Capture it. Get it done.">
+  <meta name="title-zh" content="Flitdo — 随手记下，轻松完成。">
+  <meta name="description" content="Flitdo is a minimal Android to-do app with a floating quick-add bubble, offline natural-language dates in English and Chinese, reliable local reminders and repeating tasks. No account, no ads, no tracking.">
+  <link rel="canonical" href="https://lyrels.github.io/flitdo/">
+  <link rel="icon" href="/assets/img/flitdo-icon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#f6f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#0f1013" media="(prefers-color-scheme: dark)">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Lyrels">
+  <meta property="og:title" content="Flitdo — Capture it. Get it done.">
+  <meta property="og:description" content="A minimal Android to-do app with a floating quick-add bubble. Your tasks stay on your phone.">
+  <meta property="og:image" content="https://lyrels.github.io/assets/img/lyrels-avatar-360.jpg">
+  <meta property="og:url" content="https://lyrels.github.io/flitdo/">
+  <script>(function(){var r=document.documentElement,l=null,q=/[?&]lang=(en|zh)\b/.exec(location.search);if(q){l=q[1];try{localStorage.setItem('lyrels-lang',l)}catch(e){}}if(!l){try{l=localStorage.getItem('lyrels-lang')}catch(e){}}if(l!=='en'&&l!=='zh'){l=/^zh/i.test(navigator.language||'')?'zh':'en'}r.setAttribute('data-lang',l);r.lang=l==='zh'?'zh-CN':'en'})();</script>
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <script src="/assets/js/site.js" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main"><span class="en">Skip to content</span><span class="zh">跳到正文</span></a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Lyrels home">
+        <img class="avatar" src="/assets/img/lyrels-avatar.jpg" alt="" width="30" height="30">
+        Lyrels
+      </a>
+      <nav class="nav" aria-label="Main">
+        <a href="/flitdo/" aria-current="page">Flitdo</a>
+        <a class="hide-sm" href="#features"><span class="en">Features</span><span class="zh">功能</span></a>
+        <a href="/flitdo/privacy/"><span class="en">Privacy</span><span class="zh">隐私政策</span></a>
+        <button class="lang-toggle" type="button" hidden>中文</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="app-hero">
+      <div class="wrap">
+        <div>
+          <img class="app-icon" src="/assets/img/flitdo-icon.svg" alt="Flitdo app icon" width="84" height="84">
+          <h1>Flitdo</h1>
+          <p class="tag"><span class="en">Capture it. Get it done.</span><span class="zh">随手记下，轻松完成。</span></p>
+          <p class="lede">
+            <span class="en">A minimal to-do app for Android. A floating bubble lets you add a task from any app, Flitdo reads the date and time from what you type, and local reminders make sure it gets done — all without an account, and without your tasks ever leaving your phone.</span>
+            <span class="zh">一款简洁的 Android 待办应用。悬浮气泡让你在任何应用里都能添加任务，Flitdo 会从你输入的文字里读出日期和时间，本地提醒帮你按时完成。无需账号，任务也从不离开你的手机。</span>
+          </p>
+          <div class="actions">
+            <span class="badge"><span class="en">Coming soon to Google Play</span><span class="zh">即将登陆 Google Play</span></span>
+            <a class="btn btn-ghost" href="/flitdo/privacy/"><span class="en">Privacy policy</span><span class="zh">隐私政策</span></a>
+          </div>
+          <p class="meta"><span class="en">Android 8.0 or later · English and 简体中文</span><span class="zh">Android 8.0 及以上 · 简体中文与 English</span></p>
+        </div>
+
+        <div class="stage" role="img" aria-label="Flitdo task list with a floating quick-add bubble" >
+          <div class="float-card fc-1" aria-hidden="true">
+            <div class="fc-label"><span class="en">Quick add</span><span class="zh">快速添加</span></div>
+            <div class="typed"><span class="en">Dentist tomorrow at 3 PM</span><span class="zh">明天下午三点看牙医</span></div>
+            <div class="recog"><span class="en">Recognised “tomorrow at 3 PM”</span><span class="zh">已识别“明天下午三点”</span></div>
+            <div class="chips"><span><span class="en">Tomorrow</span><span class="zh">明天</span></span><span><span class="en">3:00 PM</span><span class="zh">15:00</span></span><span><span class="en">Remind me</span><span class="zh">提醒我</span></span></div>
+          </div>
+
+          <div class="phone" aria-hidden="true">
+            <div class="screen">
+              <div class="status"><span>9:41</span><span>●●●</span></div>
+              <div class="bar-title"><span class="en">Tasks</span><span class="zh">任务</span></div>
+              <div class="group">
+                <div class="group-h"><span class="en">Today</span><span class="zh">今天</span> <em>3</em></div>
+                <div class="row" style="--s:#dc3b42"><span class="tick"></span><span class="t"><b><span class="en">Submit expense report</span><span class="zh">提交报销单</span></b><small><span class="en">Overdue · Yesterday</span><span class="zh">已逾期 · 昨天</span></small></span></div>
+                <div class="row" style="--s:#e5770a"><span class="tick"></span><span class="t"><b><span class="en">Dentist</span><span class="zh">看牙医</span></b><small><span class="en">Due soon · 3:00 PM</span><span class="zh">即将到期 · 15:00</span></small></span></div>
+                <div class="row" style="--s:#a0a2a8"><span class="tick"></span><span class="t"><b><span class="en">Buy milk</span><span class="zh">买牛奶</span></b><small><span class="en">No date</span><span class="zh">无日期</span></small></span></div>
+              </div>
+              <div class="group">
+                <div class="group-h"><span class="en">Upcoming</span><span class="zh">即将到来</span> <em>2</em></div>
+                <div class="row" style="--s:#2f7cf6"><span class="tick"></span><span class="t"><b><span class="en">Call mom</span><span class="zh">给妈妈打电话</span></b><small><span class="en">Fri</span><span class="zh">周五</span></small></span></div>
+                <div class="row" style="--s:#2f7cf6"><span class="tick"></span><span class="t"><b><span class="en">Renew bank card</span><span class="zh">去银行换卡</span></b><small><span class="en">Nov 8</span><span class="zh">11月8日</span></small></span></div>
+              </div>
+              <div class="group">
+                <div class="group-h"><span class="en">Completed</span><span class="zh">已完成</span> <em>4</em></div>
+                <div class="row is-done" style="--s:#2e9e62"><span class="tick"></span><span class="t"><b><span class="en">Book train tickets</span><span class="zh">订火车票</span></b><small><span class="en">Completed</span><span class="zh">已完成</span></small></span></div>
+              </div>
+              <div class="bubble"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></div>
+              <div class="nav-bar">
+                <i class="on"></i>
+                <span class="add"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.6" stroke-linecap="round"><path d="M12 6v12M6 12h12"/></svg></span>
+                <i></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="float-card fc-2" aria-hidden="true">
+            <div class="fc-label"><span class="en">Reminder</span><span class="zh">提醒</span></div>
+            <div class="typed" style="font-size:14px"><span class="en">Dentist · in 5 min</span><span class="zh">看牙医 · 5 分钟后</span></div>
+            <div class="chips"><span><span class="en">Done</span><span class="zh">完成</span></span><span><span class="en">Snooze 10 min</span><span class="zh">稍后 10 分钟</span></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="en">Features</span><span class="zh">功能</span></span>
+          <h2 id="features-title"><span class="en">Everything a to-do app needs. Nothing it doesn’t.</span><span class="zh">待办应用该有的都有，不该有的一样没有。</span></h2>
+          <p><span class="en">Flitdo is built around one idea: writing a task down should take a second, and remembering it should be the app’s job.</span><span class="zh">Flitdo 围绕一个想法打造：记下一件事只该花一秒钟，记住它是应用的事。</span></p>
+        </div>
+
+        <div class="features">
+          <article class="feature wide">
+            <div>
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7V5h11v2M9.5 5v14M7 19h5"/><path d="M18 10v7M14.5 13.5h7"/></svg></div>
+              <h3><span class="en">Understands what you type</span><span class="zh">读懂你写的时间</span></h3>
+              <p>
+                <span class="en">Write naturally in English or Chinese. Flitdo recognises dates and times right on your phone — no AI service, no server — and shows what it understood before saving. Ambiguous input is never guessed, and you can teach it your own phrasing with templates.</span>
+                <span class="zh">用中文或英文自然地写。Flitdo 直接在手机上识别日期和时间——不用 AI 服务，也不连服务器——保存前会先告诉你它识别到了什么。有歧义的输入绝不瞎猜，你还可以用模板教它认识你自己的说法。</span>
+              </p>
+            </div>
+            <div class="examples" aria-label="Examples">
+              <div><q>Dentist tomorrow at 3 PM</q><span><span class="en">Tomorrow · 3:00 PM</span><span class="zh">明天 · 15:00</span></span></div>
+              <div><q>明天下午三点开会</q><span><span class="en">Tomorrow · 3:00 PM</span><span class="zh">明天 · 15:00</span></span></div>
+              <div><q>call mom in 2 hours</q><span><span class="en">In 2 hours</span><span class="zh">2 小时后</span></span></div>
+              <div><q>周五去银行换卡</q><span><span class="en">Friday · no time</span><span class="zh">周五 · 不设时间</span></span></div>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 8.5v7M8.5 12h7"/></svg></div>
+            <h3><span class="en">Floating quick-add bubble</span><span class="zh">悬浮快速添加气泡</span></h3>
+            <p><span class="en">An optional + bubble floats over other apps. Tap, type, done — without leaving what you’re doing. When idle it slides into the screen edge, out of your way.</span><span class="zh">可选的 + 气泡悬浮在其他应用之上。点一下、输入、完成，不必离开手头的事。闲置时会滑进屏幕边缘，不挡视线。</span></p>
+          </article>
+
+          <article class="feature">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 2h-15z"/><path d="M10 21h4"/></svg></div>
+            <h3><span class="en">Reminders you can rely on</span><span class="zh">可靠的提醒</span></h3>
+            <p><span class="en">Local notifications with Done and Snooze that survive restarts, updates and time-zone changes. Optionally keep reminding until handled, with quiet hours and your own sound.</span><span class="zh">带“完成”和“稍后提醒”的本地通知，重启、更新、切换时区后依然有效。还可以选择持续提醒直到处理，支持免打扰时段和自定义提示音。</span></p>
+          </article>
+
+          <article class="feature">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 3l3 3-3 3"/><path d="M4 12v-2a4 4 0 0 1 4-4h12"/><path d="M7 21l-3-3 3-3"/><path d="M20 12v2a4 4 0 0 1-4 4H4"/></svg></div>
+            <h3><span class="en">Repeating tasks</span><span class="zh">重复任务</span></h3>
+            <p><span class="en">Every day, every weekday, chosen days of the week, every few days, monthly or yearly. There is always exactly one open occurrence — missed ones never pile up.</span><span class="zh">每天、每个工作日、每周指定几天、每隔几天、每月或每年。始终只有一个待办的实例，错过的不会越堆越多。</span></p>
+          </article>
+
+          <article class="feature">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a9 9 0 1 0 0 18c1.1 0 1.8-.8 1.8-1.7 0-.5-.2-.9-.5-1.2-.3-.3-.5-.7-.5-1.2 0-.9.8-1.7 1.7-1.7H16a5 5 0 0 0 5-5c0-4-4-7.2-9-7.2z"/><circle cx="7.5" cy="11" r="1"/><circle cx="10.5" cy="7.5" r="1"/><circle cx="15" cy="8" r="1"/></svg></div>
+            <h3><span class="en">Make it yours</span><span class="zh">按你的喜好定制</span></h3>
+            <p><span class="en">Pick the bubble’s icon (or use your own image), size, theme, colours and a gentle reminder animation. Colours that would hurt readability are corrected automatically.</span><span class="zh">自选气泡图标（也可以用自己的图片）、大小、主题、颜色和柔和的提醒动画。影响可读性的配色会被自动修正。</span></p>
+          </article>
+
+          <article class="feature wide">
+            <div>
+              <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div>
+              <h3><span class="en">Plan by date</span><span class="zh">按日期规划</span></h3>
+              <p><span class="en">Today, Upcoming and Completed at a glance, plus a month calendar that marks what is due on each day. Status is always shown with an icon and a word as well as a colour, never colour alone.</span><span class="zh">“今天”“即将到来”“已完成”一目了然，月历还会标出每天的待办。状态除了颜色，还始终配有图标和文字，绝不只靠颜色区分。</span></p>
+              <div class="legend" aria-label="Status colours">
+                <span><i style="background:var(--normal)"></i><span class="en">Planned</span><span class="zh">计划中</span></span>
+                <span><i style="background:var(--soon)"></i><span class="en">Due soon</span><span class="zh">即将到期</span></span>
+                <span><i style="background:var(--overdue)"></i><span class="en">Overdue</span><span class="zh">已逾期</span></span>
+                <span><i style="background:var(--undated)"></i><span class="en">No date</span><span class="zh">无日期</span></span>
+                <span><i style="background:var(--done)"></i><span class="en">Completed</span><span class="zh">已完成</span></span>
+              </div>
+            </div>
+            <div class="examples" aria-hidden="true">
+              <div><q><span class="en">Today</span><span class="zh">今天</span></q><span><span class="en">Due today, overdue and undated</span><span class="zh">今天到期、逾期和无日期</span></span></div>
+              <div><q><span class="en">Upcoming</span><span class="zh">即将到来</span></q><span><span class="en">Everything after today</span><span class="zh">今天之后的全部任务</span></span></div>
+              <div><q><span class="en">Completed</span><span class="zh">已完成</span></q><span><span class="en">Your finished tasks</span><span class="zh">已经完成的任务</span></span></div>
+            </div>
+          </article>
+
+          <article class="feature">
+            <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 14L4 9l5-5"/><path d="M4 9h10.5a5.5 5.5 0 0 1 0 11H11"/></svg></div>
+            <h3><span class="en">Undo, always</span><span class="zh">随时撤销</span></h3>
+            <p><span class="en">Deleted the wrong task — or a whole section? Bring it back within 15 seconds, even if the app was closed in between.</span><span class="zh">删错了一个任务，甚至一整组？15 秒内都能恢复，即使中途关掉了应用也可以。</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="privacy-title">
+      <div class="wrap">
+        <div class="privacy-band">
+          <div>
+            <span class="eyebrow"><span class="en">Privacy</span><span class="zh">隐私</span></span>
+            <h2 id="privacy-title"><span class="en">Your tasks stay on your phone.</span><span class="zh">你的任务只留在你的手机上。</span></h2>
+            <p><span class="en">Flitdo doesn’t collect, send or share your data. It doesn’t even ask for Internet access, so there is simply no way for your tasks to leave the device through the app.</span><span class="zh">Flitdo 不收集、不上传、也不分享你的数据。它甚至不申请联网权限，你的任务根本没有途径通过应用离开设备。</span></p>
+            <div class="actions"><a class="btn btn-primary" href="/flitdo/privacy/"><span class="en">Read the privacy policy</span><span class="zh">阅读隐私政策</span></a></div>
+          </div>
+          <ul class="checks">
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">No Internet permission</span><span class="zh">不申请联网权限</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">No account or sign-up</span><span class="zh">无需账号，无需注册</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">No ads, analytics or tracking</span><span class="zh">无广告、无统计、无追踪</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">Smart input runs fully offline</span><span class="zh">智能识别完全离线运行</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="perm-title">
+      <div class="wrap">
+        <div class="section-head">
+          <span class="eyebrow"><span class="en">Permissions</span><span class="zh">权限</span></span>
+          <h2 id="perm-title"><span class="en">Only what a feature needs</span><span class="zh">只申请功能必需的权限</span></h2>
+          <p><span class="en">Each permission is used for exactly one thing. Without any of them, your task list and calendar keep working.</span><span class="zh">每项权限只用于一件事。即使全部不授予，任务列表和日历依然可以正常使用。</span></p>
+        </div>
+        <table class="perm">
+          <thead>
+            <tr><th scope="col"><span class="en">Permission</span><span class="zh">权限</span></th><th scope="col"><span class="en">What it’s for</span><span class="zh">用途</span></th></tr>
+          </thead>
+          <tbody>
+            <tr><td><span class="en">Notifications</span><span class="zh">通知</span></td><td><span class="en">Showing your reminders.</span><span class="zh">显示你设置的提醒。</span></td></tr>
+            <tr><td><span class="en">Alarms &amp; reminders</span><span class="zh">闹钟和提醒</span></td><td><span class="en">Delivering reminders exactly on time. Without it, Android decides when they arrive.</span><span class="zh">让提醒准时送达。未授予时，由 Android 决定提醒的送达时间。</span></td></tr>
+            <tr><td><span class="en">Display over other apps</span><span class="zh">显示在其他应用上层</span></td><td><span class="en">The optional floating bubble only. Off by default.</span><span class="zh">仅用于可选的悬浮气泡，默认关闭。</span></td></tr>
+            <tr><td><span class="en">Foreground service</span><span class="zh">前台服务</span></td><td><span class="en">Keeping the bubble available while you have it switched on. A notification shows while it runs and lets you turn it off.</span><span class="zh">在你开启气泡期间保持其可用。运行时会显示一条通知，可以随时从通知中关闭。</span></td></tr>
+            <tr><td><span class="en">Run at startup</span><span class="zh">开机启动</span></td><td><span class="en">Restoring reminders (and the bubble, if enabled) after the phone restarts.</span><span class="zh">手机重启后恢复提醒（以及已开启的气泡）。</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="details-title">
+      <div class="wrap">
+        <div class="section-head" style="margin-bottom:24px">
+          <h2 id="details-title" style="font-size:24px"><span class="en">Details</span><span class="zh">更多信息</span></h2>
+        </div>
+        <div class="specs">
+          <span><span class="en">Android 8.0 or later</span><span class="zh">Android 8.0 及以上</span></span>
+          <span>English · 简体中文</span>
+          <span><span class="en">Light and dark theme</span><span class="zh">浅色与深色主题</span></span>
+          <span><span class="en">TalkBack support</span><span class="zh">支持 TalkBack 读屏</span></span>
+          <span><span class="en">Phones, tablets and foldables</span><span class="zh">手机、平板与折叠屏</span></span>
+          <span><span class="en">Developer: Lyrels</span><span class="zh">开发者：Lyrels</span></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Lyrels home">
+        <img class="avatar" src="/assets/img/lyrels-avatar.jpg" alt="" width="30" height="30">
+        Lyrels
+      </a>
+      <nav aria-label="Footer">
+        <a href="/flitdo/">Flitdo</a>
+        <a href="/flitdo/privacy/"><span class="en">Flitdo Privacy Policy</span><span class="zh">Flitdo 隐私政策</span></a>
+        <a href="mailto:lyzuwh@gmail.com">lyzuwh@gmail.com</a>
+      </nav>
+      <small>© <span data-year>2026</span> Lyrels. <span class="en">All rights reserved.</span><span class="zh">保留所有权利。</span></small>
+    </div>
+  </footer>
+</body>
+</html>
