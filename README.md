@@ -26,7 +26,7 @@ flitdo/privacy/index.html  Flitdo privacy policy (EN + 简体中文)
 404.html
 assets/css/site.css        all styles; colours mirror the Flitdo app palette
 assets/js/site.js          language toggle, header hairline, table-of-contents highlight
-assets/img/                Lyrels avatar (JPEG/PNG sizes), Flitdo icon (SVG)
+assets/img/                Lyrels avatar (JPEG/PNG sizes); Flitdo icon (SVG, 512 px PNG for Play, touch icon)
 robots.txt, sitemap.xml
 ```
 

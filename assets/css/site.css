@@ -337,7 +337,7 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
 }
 
 .float-card {
-  position: absolute; background: var(--surface); color: var(--ink);
+  position: absolute; z-index: 2; background: var(--surface); color: var(--ink);
   border: 1px solid var(--line-soft); border-radius: 18px; box-shadow: var(--shadow-lg);
   padding: 14px 16px; width: 248px; font-size: 13px;
 }
