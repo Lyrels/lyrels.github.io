@@ -1,0 +1,15 @@
+{
+  "format": "flitdo-review-license",
+  "version": 1,
+  "kdf": {
+    "name": "PBKDF2",
+    "hash": "SHA-256",
+    "iterations": 600000,
+    "salt": "5QWwouIkUbKBxnmoM9JqFw=="
+  },
+  "cipher": {
+    "name": "AES-GCM",
+    "iv": "YzcDn+Exr6butiNo"
+  },
+  "data": "Js+N3vJJ6tH3z0OpCHHqBgv3/tH9u3zEi6IYfch2Oippc96BxdPdF83mhHM4oVx6lC7kjUuhy1Z8AQ/fFAdIlf+XPXdzWETjEYc2FL2y9O1+yO6wWybQW5xwGZnCzuvw0vh02BaYd35Jfmk719Zkh5gRJMRnEKwnQOCUx/3SskA+mm4YBoqlo8/lZ348x0rcFnfacyrGJ7zEUF4R13UcZkzPPqGXPI/TCMfsvJ3ynPsPQT8U2y+Pw98ReFj0Uk5FzZNgc9uBnYapHgwxfW2CdLm6sPC2GJpH2aacbYqArraUEmlyM6mwGkTsT2OWzzlHjpU8mjtEsYHYToNRJayfk82vElpFBSYrovlfEzc5BGYPpdRQSrsJmjvg2okgaGGX0GLPKI4EEw=="
+}

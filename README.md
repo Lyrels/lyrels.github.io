@@ -7,6 +7,7 @@ The official website of **Lyrels**, served by GitHub Pages at <https://lyrels.gi
 | Brand home | <https://lyrels.github.io/> | `index.html` |
 | Flitdo product page | <https://lyrels.github.io/flitdo/> | `flitdo/index.html` |
 | Flitdo privacy policy (used in Google Play Console) | <https://lyrels.github.io/flitdo/privacy/> | `flitdo/privacy/index.html` |
+| Flitdo review access (Google Play reviewers only, not indexed) | <https://lyrels.github.io/flitdo/review/> | `flitdo/review/`, see [`.github/review-license/README.md`](.github/review-license/README.md) |
 | Not found | any other path | `404.html` |
 
 Plain static HTML and CSS — no build step, no frameworks, no external requests (no web fonts, CDNs,
@@ -23,6 +24,7 @@ browser language. Without JavaScript the English text is shown.
 index.html                 brand home
 flitdo/index.html          Flitdo product page
 flitdo/privacy/index.html  Flitdo privacy policy (EN + 简体中文)
+flitdo/review/             review access: decrypting page and the encrypted certificate
 404.html
 assets/css/site.css        all styles; colours mirror the Flitdo app palette
 assets/js/site.js          language toggle, header hairline, table-of-contents highlight

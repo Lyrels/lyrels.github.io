@@ -1,0 +1,68 @@
+name: Rotate review certificate
+
+# A daily check rather than a 15-day schedule: GitHub can delay or drop scheduled runs, so rotate.mjs
+# decides from the published metadata whether a rotation is due. See .github/review-license/README.md.
+on:
+  schedule:
+    - cron: '23 3 * * *'
+  workflow_dispatch:
+    inputs:
+      force:
+        description: Issue a new certificate even if none is due
+        type: boolean
+        default: true
+
+permissions:
+  contents: write
+  pages: write
+
+concurrency:
+  group: review-certificate
+  cancel-in-progress: false
+
+jobs:
+  rotate:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: 24
+
+      - name: Test the tools
+        run: node --test .github/review-license/test/license.test.mjs
+
+      - name: Rotate if due
+        id: rotate
+        env:
+          REVIEW_SIGNING_PRIVATE_KEY: ${{ secrets.REVIEW_SIGNING_PRIVATE_KEY }}
+          REVIEW_DECRYPT_PASSWORD: ${{ secrets.REVIEW_DECRYPT_PASSWORD }}
+          FORCE: ${{ inputs.force && '--force' || '' }}
+        run: node .github/review-license/rotate.mjs $FORCE
+
+      - name: Commit the new files
+        if: steps.rotate.outputs.changed == 'true'
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add flitdo/review/license.enc flitdo/review/license.json
+          git commit -m 'Rotate the review certificate'
+          for attempt in 1 2 3; do
+            git pull --rebase origin main && git push origin HEAD:main && exit 0
+            sleep 10
+          done
+          exit 1
+
+      # A push made with this token may not start a Pages build by itself.
+      - name: Request a Pages build
+        if: steps.rotate.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh api --method POST "repos/$GITHUB_REPOSITORY/pages/builds" --silent || echo '::warning::The Pages build request failed; the next step shows whether the push deployed anyway.'
+
+      - name: Verify the public certificate
+        env:
+          REVIEW_DECRYPT_PASSWORD: ${{ secrets.REVIEW_DECRYPT_PASSWORD }}
+          EXPECTED_SHA256: ${{ steps.rotate.outputs.sha256 }}
+        run: node .github/review-license/verify.mjs --expect-sha256 "$EXPECTED_SHA256"

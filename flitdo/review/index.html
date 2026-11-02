@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en" data-lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self'; style-src 'self'; img-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'">
+  <meta name="referrer" content="no-referrer">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Flitdo Pro review access — Lyrels</title>
+  <meta name="description" content="Review access to Flitdo Pro for Google Play app review.">
+  <link rel="icon" href="/assets/img/flitdo-icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/assets/css/site.css">
+  <link rel="stylesheet" href="review.css">
+  <script type="module" src="review.mjs"></script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Lyrels home">
+        <img class="avatar" src="/assets/img/lyrels-avatar.jpg" alt="" width="30" height="30">
+        Lyrels
+      </a>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="doc-head">
+      <div class="wrap review-wrap">
+        <h1>Flitdo Pro review access</h1>
+        <p class="dates">For Google Play app review only.</p>
+      </div>
+    </div>
+
+    <div class="wrap review-wrap review">
+      <ol class="steps">
+        <li>Enter the decryption password from the sign-in details in Play Console, then select <strong>Decrypt</strong>.</li>
+        <li>Select <strong>Copy certificate</strong>, then continue with the instructions in Play Console.</li>
+      </ol>
+
+      <form id="unlock" class="unlock" autocomplete="off">
+        <label for="password">Decryption password</label>
+        <div class="field-row">
+          <input id="password" name="review-decrypt" type="password" autocomplete="off" autocapitalize="off" autocorrect="off" spellcheck="false" required>
+          <button id="decrypt" class="btn btn-primary" type="submit" disabled>Decrypt</button>
+        </div>
+      </form>
+      <p id="status" class="status" role="status">Loading the latest certificate…</p>
+
+      <section id="result" class="result" aria-labelledby="result-title" hidden>
+        <h2 id="result-title">Review certificate</h2>
+        <textarea id="certificate" rows="6" readonly spellcheck="false" aria-labelledby="result-title"></textarea>
+        <button id="copy" class="btn btn-primary" type="button">Copy certificate</button>
+        <dl>
+          <div><dt>Updated</dt><dd id="updated"></dd></div>
+          <div><dt>Expires</dt><dd id="expires"></dd></div>
+        </dl>
+        <p id="expired" class="warning" role="alert" hidden>This certificate has expired. Reload this page in a few minutes. If it is still expired, write to <a href="mailto:lyzuwh@gmail.com">lyzuwh@gmail.com</a>.</p>
+      </section>
+
+      <p class="note">The password stays on this page: it is not stored and is not sent anywhere. Decryption happens in your browser.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap review-wrap">
+      <small>© 2026 Lyrels</small>
+    </div>
+  </footer>
+</body>
+</html>
