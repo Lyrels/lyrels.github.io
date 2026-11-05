@@ -48,7 +48,7 @@
         <h1><span class="en">Flitdo Privacy Policy</span><span class="zh">Flitdo 隐私政策</span></h1>
         <p class="dates">
           <span><span class="en">Effective date: October 30, 2026</span><span class="zh">生效日期：2026 年 10 月 30 日</span></span>
-          <span><span class="en">Last updated: November 4, 2026</span><span class="zh">最近更新：2026 年 11 月 4 日</span></span>
+          <span><span class="en">Last updated: November 5, 2026</span><span class="zh">最近更新：2026 年 11 月 5 日</span></span>
         </p>
       </div>
     </div>
@@ -62,9 +62,10 @@
             <li><a href="#collect">Information we collect</a></li>
             <li><a href="#device">Data on your device</a></li>
             <li><a href="#smart-input">Smart input</a></li>
+            <li><a href="#calendars">Device calendars</a></li>
             <li><a href="#sounds">Custom reminder sounds</a></li>
             <li><a href="#permissions">Permissions</a></li>
-            <li><a href="#backup">Backup and transfer</a></li>
+            <li><a href="#backup">Backup, export and transfer</a></li>
             <li><a href="#google-play">Google Play</a></li>
             <li><a href="#retention">Retention and deletion</a></li>
             <li><a href="#security">Security</a></li>
@@ -83,7 +84,7 @@
             <h2 id="summary">In short</h2>
             <ul>
               <li>Flitdo does <strong>not collect, transmit, sell or share</strong> any personal or sensitive user data.</li>
-              <li>Everything you enter is stored <strong>only on your device</strong>. There is no account or sign-up.</li>
+              <li>Everything you enter is stored <strong>only on your device</strong>. There is no account or sign-up. The one exception is your choice: if you connect a task to one of your calendars, its title, date and time are written to that calendar (section 4).</li>
               <li>The App contains <strong>no advertising, analytics or tracking</strong>, and no third-party SDKs that collect data.</li>
               <li>The App <strong>does not request Internet access</strong>, so it cannot send your data to us or to anyone else.</li>
               <li><strong>Flitdo Pro</strong> is an optional subscription sold through Google Play. Google handles the payment; we never see your card details or your Google account.</li>
@@ -91,7 +92,7 @@
           </div>
 
           <h2 id="collect">1. Information we collect</h2>
-          <p>We do not collect any information through the App. Lyrels does not operate any server for the App, and the App has no way to send data off your device: it does not request Android’s Internet permission and contains no advertising, analytics, crash-reporting or other third-party SDKs that collect data. We never receive, see, sell or share your tasks or anything else you enter in the App. If you subscribe to Flitdo Pro, Google Play handles the purchase and gives us only the order details described in section 7.</p>
+          <p>We do not collect any information through the App. Lyrels does not operate any server for the App, and the App has no way to send data off your device: it does not request Android’s Internet permission and contains no advertising, analytics, crash-reporting or other third-party SDKs that collect data. We never receive, see, sell or share your tasks or anything else you enter in the App. If you subscribe to Flitdo Pro, Google Play handles the purchase and gives us only the order details described in section 8. If you connect a task to a calendar, the App writes that task’s title, date and time into the calendar on your device, and your calendar account may then sync it, as described in section 4.</p>
 
           <h2 id="device">2. Information stored on your device</h2>
           <p>To work, the App stores the following in its private storage on your device. This data stays on your device and is not accessible to us.</p>
@@ -100,17 +101,27 @@
             <div><dt>Deleted tasks</dt><dd>A copy is kept for 15 seconds so you can undo the deletion, and is then permanently removed.</dd></div>
             <div><dt>Settings</dt><dd>Theme, language, smart-input options and your own input templates, floating-bubble settings, and reminder settings such as sound, follow-up reminders and quiet hours.</dd></div>
             <div><dt>Imported images</dt><dd>Images you choose as bubble icons through Android’s system file picker. They are re-encoded and saved in the App’s private storage. The App can access only the files you pick.</dd></div>
+            <div><dt>Calendar choices and links</dt><dd>If you use device calendars: which calendars you chose to show, whether their events appear in the home screen widget, and for each task you connected to an event, the event’s identifier and the last title, date and time both sides agreed on. This is kept apart from your other data and is not included in Android backups or in backup files you save.</dd></div>
             <div><dt>Subscription record</dt><dd>If you subscribe to Flitdo Pro: the purchase record that Google Play gives the App (order number, plan, purchase time, purchase token and whether it renews) and when Google Play last confirmed it, so that Pro keeps working for a short time if Google Play cannot be reached. Also a random identifier created on your device; when you buy, the App gives Google Play a scrambled (hashed) form of it with the purchase, which says nothing about you. This record is not included in Android backups.</dd></div>
           </dl>
 
           <h2 id="smart-input">3. Smart input</h2>
           <p>Flitdo recognises dates and times in what you type using rules built into the App. This processing happens entirely on your device. No AI service, server or network connection is involved, and your text is never sent anywhere.</p>
 
-          <h2 id="sounds">4. Custom reminder sounds</h2>
+          <h2 id="calendars">4. Device calendars</h2>
+          <p>Calendar features are optional and stay off until you set them up. Flitdo works only with the calendars already on your device through Android’s calendar storage. It does not sign in to Google, Microsoft or any other account, and it has no Internet access of its own.</p>
+          <ul>
+            <li><strong>Showing events.</strong> If you allow calendar access and choose calendars, Flitdo reads the events of the day you are viewing in those calendars and shows them in the App, and in the home screen widget only if you turn that on. Reading events creates no tasks and keeps no copy of them; an event becomes a task only when you copy or connect it.</li>
+            <li><strong>Connecting a task and an event.</strong> Flitdo writes to a calendar only for a task you have confirmed to connect: it creates or updates that one event in the calendar you chose, with the task’s title, date and time, and keeps the two in step. Completion, reminders, repeat rules and other task details are never written. Deleting either side does not delete the other, and disconnecting keeps both.</li>
+            <li><strong>Your calendar account.</strong> Events Flitdo writes are handled like any other event in that calendar. If the calendar belongs to an account that syncs, such as Google or Microsoft Outlook, that account’s own sync on your device may send the event to its servers, under that provider’s privacy policy. Lyrels never receives these events.</li>
+          </ul>
+          <p>You can stop showing calendars, pause or disconnect connected tasks in the App’s settings, and withdraw calendar access in Android settings at any time.</p>
+
+          <h2 id="sounds">5. Custom reminder sounds</h2>
           <p>On Android 10 and later you can choose an audio file as a reminder sound, or with Flitdo Pro as the sound of alarm-style reminders. Because Android can only play notification sounds that are available outside an app’s private storage, Flitdo saves a validated copy of the file you choose in the shared <strong>Notifications/Flitdo</strong> folder on your device. Like other files in shared storage, this copy can be accessed by the system and by other apps that you have allowed to access audio or media files.</p>
           <p>Flitdo deletes the copy when you choose a different sound. If you uninstall Flitdo while a custom sound is in use, the copy may remain on your device; you can delete it with any file manager. The App does not read any other audio files.</p>
 
-          <h2 id="permissions">5. Permissions</h2>
+          <h2 id="permissions">6. Permissions</h2>
           <p>Flitdo requests only the Android permissions its features need. None of them is used to collect information.</p>
           <ul>
             <li><strong>Notifications</strong> — to show your reminders.</li>
@@ -119,42 +130,47 @@
             <li><strong>Foreground service</strong> — to keep the bubble available while you have it switched on, and to keep a reminder ringing until you stop it or the time you chose runs out. A notification is shown while it runs.</li>
             <li><strong>Vibrate</strong> — to vibrate when a reminder rings.</li>
             <li><strong>Run at startup</strong> — to restore your reminders (and the bubble, if you enabled it) after the device restarts or the App is updated.</li>
+            <li><strong>Calendar</strong> — only if you set up device calendars: to show events from the calendars you choose and to keep tasks you connect in step with their events (section 4). Android asks for it when you first set calendars up.</li>
             <li><strong>Google Play billing</strong> — to let you buy and manage Flitdo Pro through Google Play. The App uses it only to talk to the Google Play Store app on your device; versions that offer no purchase do not use it.</li>
           </ul>
-          <p>Flitdo does not request access to the Internet, your location, contacts, calendar, camera, microphone, phone, SMS or device storage, and does not use the Android advertising ID.</p>
+          <p>Flitdo does not request access to the Internet, your location, contacts, camera, microphone, phone, SMS or device storage, and does not use the Android advertising ID.</p>
 
-          <h2 id="backup">6. Backup and device transfer</h2>
-          <p>If backup is turned on for your device, Android may include the App’s tasks, settings and imported bubble icons in the backup that it stores in your own Google account, and may copy them to a new device during device-to-device transfer. These backups are created and stored by Google under your account and are governed by the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>; Lyrels has no access to them. You can turn backup off at any time in your device’s system settings.</p>
+          <h2 id="backup">7. Backup, export and device transfer</h2>
+          <p>If backup is turned on for your device, Android may include the App’s tasks, settings and imported bubble icons in the backup that it stores in your own Google account, and may copy them to a new device during device-to-device transfer. These backups are created and stored by Google under your account and are governed by the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>; Lyrels has no access to them. Calendar choices and links and the subscription record are not included. You can turn backup off at any time in your device’s system settings.</p>
+          <p><strong>Backup files you save.</strong> In the App’s settings you can save a backup file (JSON) of your tasks, completed history, repeat plans, reminder settings and other settings, or export your tasks as a CSV file. Android’s file picker lets you choose where the file goes, for example on your device or in a cloud storage app, and anyone or any app with access to that place can read it. Flitdo does not upload these files, and they contain neither the subscription record nor calendar choices and links. Restoring reads only the file you pick.</p>
+          <p><strong>Home screen widget.</strong> If you add Flitdo’s widget to your home screen, it shows the titles and times of today’s tasks, and of calendar events if you turn that on, to anyone who can see your screen.</p>
 
-          <h2 id="google-play">7. Google Play</h2>
+          <h2 id="google-play">8. Google Play</h2>
           <p>The App is distributed through Google Play. When you download, install or update the App, Google processes information as described in the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. If you have chosen to share usage and diagnostics information with Google, Google may provide us with aggregated statistics about installs and anonymous reports about crashes and app performance. These reports do not identify you, and we use them only to improve the App’s stability and quality.</p>
           <p><strong>Subscriptions.</strong> Flitdo Pro is an optional subscription; the App works without it. If you subscribe, Google Play handles the payment and keeps the purchase with your Google account, as described in the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>. We never receive your card details or your Google account. The App checks your purchase on your device, using the record Google Play gives it, and sends nothing about it to us. Google Play gives us the order details it provides to all developers, such as the order number, plan, price and country, which we use only to manage subscriptions, refunds and our accounts. You can cancel at any time in Google Play, and refunds are handled there too.</p>
 
-          <h2 id="retention">8. Data retention and deletion</h2>
+          <h2 id="retention">9. Data retention and deletion</h2>
           <p>Your data stays on your device for as long as you keep it there:</p>
           <ul>
             <li>You can delete individual tasks, or all tasks in a section, within the App. Deleted tasks are permanently removed after the 15-second undo period.</li>
             <li>To remove all of the App’s data, clear its storage in Android settings or uninstall the App.</li>
             <li>Backup copies in your Google account can be managed or deleted in your device’s backup settings or your Google account.</li>
+            <li>Backup and export files you saved stay where you saved them until you delete them.</li>
+            <li>Events Flitdo wrote to a calendar stay in that calendar until you delete them there; disconnecting a task or uninstalling Flitdo does not remove them.</li>
           </ul>
           <p>The App sends us nothing, so we hold no data from it. If you subscribe, the order details Google Play provides stay in Google Play and in our accounting records for as long as tax and accounting rules require. Uninstalling the App removes the subscription record on your device; the subscription itself stays with your Google account until you cancel it.</p>
 
-          <h2 id="security">9. Security</h2>
+          <h2 id="security">10. Security</h2>
           <p>The App keeps your data in its private storage, which Android isolates from other apps. Because the App does not connect to the Internet, your data is never transmitted over a network by the App. We recommend protecting your device with a screen lock.</p>
 
-          <h2 id="children">10. Children</h2>
+          <h2 id="children">11. Children</h2>
           <p>Flitdo is a general-audience productivity app and is not directed at children. It does not collect personal information from anyone, including children under the age of 13.</p>
 
-          <h2 id="website">11. This website</h2>
+          <h2 id="website">12. This website</h2>
           <p>lyrels.github.io is a static website hosted on GitHub Pages. It does not use cookies, analytics or tracking scripts, and does not load resources from other websites. If you switch the page language, your choice is stored only in your own browser. When you visit, GitHub may collect technical information such as your IP address to operate and secure the service, as described in the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub General Privacy Statement</a>.</p>
 
-          <h2 id="emails">12. If you contact us</h2>
+          <h2 id="emails">13. If you contact us</h2>
           <p>If you email us, we use your email address and the content of your message only to reply to you. We do not share them with anyone, and we will delete our correspondence with you on request.</p>
 
-          <h2 id="changes">13. Changes to this policy</h2>
+          <h2 id="changes">14. Changes to this policy</h2>
           <p>We may update this policy from time to time, for example when the App gains new features. The current version is always published at this address, with the “Last updated” date shown above. If a change affects how your information is handled — for example, if a future version of the App collects any data — we will update this policy before that version is released.</p>
 
-          <h2 id="contact">14. Contact</h2>
+          <h2 id="contact">15. Contact</h2>
           <p>If you have any questions about this policy or about Flitdo, please contact us:</p>
           <div class="contact-card">
             <strong>Lyrels</strong>
@@ -173,9 +189,10 @@
             <li><a href="#zh-collect">我们收集的信息</a></li>
             <li><a href="#zh-device">设备上的数据</a></li>
             <li><a href="#zh-smart-input">智能识别</a></li>
+            <li><a href="#zh-calendars">设备日历</a></li>
             <li><a href="#zh-sounds">自定义提醒音</a></li>
             <li><a href="#zh-permissions">权限</a></li>
-            <li><a href="#zh-backup">备份与迁移</a></li>
+            <li><a href="#zh-backup">备份、导出与迁移</a></li>
             <li><a href="#zh-google-play">Google Play</a></li>
             <li><a href="#zh-retention">保留与删除</a></li>
             <li><a href="#zh-security">安全</a></li>
@@ -194,7 +211,7 @@
             <h2 id="zh-summary">概要</h2>
             <ul>
               <li>Flitdo <strong>不收集、不传输、不出售、也不分享</strong>任何个人信息或敏感用户数据。</li>
-              <li>你输入的所有内容都<strong>只保存在你的设备上</strong>，无需账号，也无需注册。</li>
+              <li>你输入的所有内容都<strong>只保存在你的设备上</strong>，无需账号，也无需注册。唯一的例外由你决定：如果你把某个任务与日历关联，它的标题、日期和时间会写入该日历（第 4 节）。</li>
               <li>本应用<strong>不含广告、统计分析或追踪功能</strong>，也不含任何会收集数据的第三方 SDK。</li>
               <li>本应用<strong>不申请联网权限</strong>，因此无法将你的数据发送给我们或任何其他人。</li>
               <li><strong>Flitdo Pro</strong> 是通过 Google Play 销售的可选订阅。付款由 Google 处理，我们看不到你的银行卡信息，也看不到你的 Google 账号。</li>
@@ -202,7 +219,7 @@
           </div>
 
           <h2 id="zh-collect">1. 我们收集的信息</h2>
-          <p>我们不通过本应用收集任何信息。Lyrels 没有为本应用运营任何服务器，本应用也无法将数据发送到设备之外：它不申请 Android 的联网（Internet）权限，也不包含任何广告、统计分析、崩溃上报或其他会收集数据的第三方 SDK。我们从不接收、查看、出售或分享你的任务以及你在本应用中输入的任何其他内容。如果你订阅 Flitdo Pro，购买由 Google Play 处理，我们只会收到第 7 节所述的订单信息。</p>
+          <p>我们不通过本应用收集任何信息。Lyrels 没有为本应用运营任何服务器，本应用也无法将数据发送到设备之外：它不申请 Android 的联网（Internet）权限，也不包含任何广告、统计分析、崩溃上报或其他会收集数据的第三方 SDK。我们从不接收、查看、出售或分享你的任务以及你在本应用中输入的任何其他内容。如果你订阅 Flitdo Pro，购买由 Google Play 处理，我们只会收到第 8 节所述的订单信息。如果你把任务与日历关联，本应用会把该任务的标题、日期和时间写入你设备上的日历，之后你的日历账号可能会同步它，详见第 4 节。</p>
 
           <h2 id="zh-device">2. 保存在你设备上的信息</h2>
           <p>为了正常运行，本应用会在你设备上的应用私有存储中保存以下内容。这些数据只保留在你的设备上，我们无法访问。</p>
@@ -211,17 +228,27 @@
             <div><dt>已删除的任务</dt><dd>保留一份副本 15 秒，以便你撤销删除，之后永久删除。</dd></div>
             <div><dt>设置</dt><dd>主题、语言、智能识别选项及你自定义的输入模板、悬浮气泡设置，以及提示音、持续提醒和免打扰时段等提醒设置。</dd></div>
             <div><dt>导入的图片</dt><dd>你通过 Android 系统文件选择器选作气泡图标的图片，经重新编码后保存在应用私有存储中。本应用只能访问你所选择的文件。</dd></div>
+            <div><dt>日历选择与关联</dt><dd>如果你使用设备日历：你选择显示哪些日历、这些日历的事件是否显示在桌面小组件中，以及每个与事件关联的任务所对应的事件标识和双方最近一致的标题、日期和时间。这些信息与你的其他数据分开保存，不会包含在 Android 备份或你保存的备份文件中。</dd></div>
             <div><dt>订阅记录</dt><dd>如果你订阅了 Flitdo Pro：Google Play 提供给本应用的购买记录（订单号、方案、购买时间、购买凭证以及是否自动续订），以及 Google Play 最近一次确认的时间，以便在暂时无法连接 Google Play 时 Pro 仍可短时间使用。此外还有一个在你设备上生成的随机标识；购买时，本应用会把它经不可逆处理（哈希）后的值随购买一起交给 Google Play，这个值不包含任何关于你的信息。订阅记录不会包含在 Android 备份中。</dd></div>
           </dl>
 
           <h2 id="zh-smart-input">3. 智能识别</h2>
           <p>Flitdo 使用内置于应用中的规则，识别你输入内容中的日期和时间。整个处理过程完全在你的设备上完成，不涉及任何 AI 服务、服务器或网络连接，你的文字不会被发送到任何地方。</p>
 
-          <h2 id="zh-sounds">4. 自定义提醒音</h2>
+          <h2 id="zh-calendars">4. 设备日历</h2>
+          <p>日历功能是可选的，在你设置之前一直关闭。Flitdo 只通过 Android 的日历存储使用你设备上已有的日历，不会登录 Google、Microsoft 或任何其他账号，本身也没有联网权限。</p>
+          <ul>
+            <li><strong>显示事件。</strong>如果你允许访问日历并选择了日历，Flitdo 会读取这些日历中你正在查看的那一天的事件，显示在应用中；只有你开启后，才会显示在桌面小组件中。读取事件不会创建任务，也不会保留副本；只有你复制或关联某个事件时，它才会成为任务。</li>
+            <li><strong>关联任务与事件。</strong>只有对你确认关联的任务，Flitdo 才会写入日历：在你选择的日历中创建或更新这一个事件，写入任务的标题、日期和时间，并让两边保持一致。完成状态、提醒、重复规则和其他任务内容都不会写入。删除任何一边都不会删除另一边，取消关联会保留两边。</li>
+            <li><strong>你的日历账号。</strong>Flitdo 写入的事件与该日历中的其他事件一样处理。如果该日历属于会同步的账号（例如 Google 或 Microsoft Outlook），该账号在你设备上的同步功能可能会把事件发送到其服务器，适用该服务商的隐私政策。Lyrels 从不接收这些事件。</li>
+          </ul>
+          <p>你可以随时在应用设置中停止显示日历、暂停或取消已关联的任务，也可以在 Android 设置中撤销日历权限。</p>
+
+          <h2 id="zh-sounds">5. 自定义提醒音</h2>
           <p>在 Android 10 及以上版本中，你可以选择一个音频文件作为提醒音，订阅 Flitdo Pro 后也可以将其用作闹钟式提醒的铃声。由于 Android 只能播放位于应用私有存储之外的通知音，Flitdo 会将你选择的文件经校验后复制一份，保存到设备共享存储中的 <strong>Notifications/Flitdo</strong> 文件夹。与共享存储中的其他文件一样，系统以及你已授权访问音频或媒体文件的其他应用可以访问这份副本。</p>
           <p>当你改选其他提示音时，Flitdo 会删除这份副本。如果你在使用自定义提示音期间卸载 Flitdo，副本可能会保留在设备上，你可以用任意文件管理器将其删除。本应用不会读取其他任何音频文件。</p>
 
-          <h2 id="zh-permissions">5. 权限</h2>
+          <h2 id="zh-permissions">6. 权限</h2>
           <p>Flitdo 只申请其功能所需的 Android 权限，这些权限都不会被用于收集信息。</p>
           <ul>
             <li><strong>通知</strong>：用于显示你设置的提醒。</li>
@@ -230,42 +257,47 @@
             <li><strong>前台服务</strong>：在你开启气泡期间保持其可用，并让提醒持续响铃，直到你停止或到达你设定的时长。运行时会显示一条通知。</li>
             <li><strong>振动</strong>：在提醒响铃时振动。</li>
             <li><strong>开机启动</strong>：在设备重启或应用更新后，恢复你的提醒（以及你已开启的气泡）。</li>
+            <li><strong>日历</strong>：仅在你设置设备日历时使用，用于显示你所选日历中的事件，并让你关联的任务与对应事件保持一致（第 4 节）。Android 会在你首次设置日历时请求此权限。</li>
             <li><strong>Google Play 结算</strong>：用于通过 Google Play 购买和管理 Flitdo Pro。本应用仅用它与你设备上的 Google Play 商店应用通信；不提供购买的版本不会使用此权限。</li>
           </ul>
-          <p>Flitdo 不申请访问网络、位置、通讯录、日历、相机、麦克风、电话、短信或设备存储的权限，也不使用 Android 广告 ID。</p>
+          <p>Flitdo 不申请访问网络、位置、通讯录、相机、麦克风、电话、短信或设备存储的权限，也不使用 Android 广告 ID。</p>
 
-          <h2 id="zh-backup">6. 备份与设备迁移</h2>
-          <p>如果你的设备开启了备份，Android 可能会把本应用的任务、设置和导入的气泡图标包含在其存储于你本人 Google 账号中的备份里，并可能在设备间迁移时将其复制到新设备。这些备份由 Google 在你的账号下创建和存储，受 <a href="https://policies.google.com/privacy?hl=zh-CN" rel="noopener">Google 隐私权政策</a>约束，Lyrels 无法访问。你可以随时在设备的系统设置中关闭备份。</p>
+          <h2 id="zh-backup">7. 备份、导出与设备迁移</h2>
+          <p>如果你的设备开启了备份，Android 可能会把本应用的任务、设置和导入的气泡图标包含在其存储于你本人 Google 账号中的备份里，并可能在设备间迁移时将其复制到新设备。这些备份由 Google 在你的账号下创建和存储，受 <a href="https://policies.google.com/privacy?hl=zh-CN" rel="noopener">Google 隐私权政策</a>约束，Lyrels 无法访问。日历选择与关联以及订阅记录不会包含在其中。你可以随时在设备的系统设置中关闭备份。</p>
+          <p><strong>你保存的备份文件。</strong>你可以在应用设置中把任务、已完成记录、重复计划、提醒设置和其他设置保存为备份文件（JSON），或把任务导出为 CSV 文件。保存位置由你在 Android 文件选择器中决定，例如设备上或某个云存储应用中，能访问该位置的人或应用都可以读取它。Flitdo 不会上传这些文件，文件中也不包含订阅记录、日历选择与关联。恢复时只读取你选择的文件。</p>
+          <p><strong>桌面小组件。</strong>如果你把 Flitdo 小组件添加到桌面，它会向能看到你屏幕的人显示今天任务的标题和时间；如果你开启，也会显示日历事件。</p>
 
-          <h2 id="zh-google-play">7. Google Play</h2>
+          <h2 id="zh-google-play">8. Google Play</h2>
           <p>本应用通过 Google Play 分发。当你下载、安装或更新本应用时，Google 会按照 <a href="https://policies.google.com/privacy?hl=zh-CN" rel="noopener">Google 隐私权政策</a>处理相关信息。如果你选择了与 Google 分享使用情况和诊断信息，Google 可能会向我们提供有关安装量的汇总统计，以及有关崩溃和应用性能的匿名报告。这些报告不会识别你的身份，我们仅将其用于改进本应用的稳定性和质量。</p>
           <p><strong>订阅。</strong>Flitdo Pro 是可选订阅，不订阅也可以使用本应用。如果你订阅，付款由 Google Play 处理，购买记录保存在你的 Google 账号中，适用 <a href="https://policies.google.com/privacy?hl=zh-CN" rel="noopener">Google 隐私权政策</a>。我们不会收到你的银行卡信息，也不会收到你的 Google 账号。本应用在你的设备上根据 Google Play 提供的记录确认购买，不会向我们发送任何相关信息。Google Play 会向我们提供它向所有开发者提供的订单信息，例如订单号、方案、价格和国家或地区，我们仅将其用于管理订阅、退款和账务。你可以随时在 Google Play 中取消订阅，退款也在 Google Play 中处理。</p>
 
-          <h2 id="zh-retention">8. 数据保留与删除</h2>
+          <h2 id="zh-retention">9. 数据保留与删除</h2>
           <p>你的数据会一直保存在你的设备上，直到你将其删除：</p>
           <ul>
             <li>你可以在应用内删除单个任务，或删除某个分组中的全部任务。已删除的任务会在 15 秒撤销期结束后被永久删除。</li>
             <li>如需删除本应用的全部数据，可在 Android 设置中清除本应用的存储空间，或卸载本应用。</li>
             <li>你 Google 账号中的备份副本，可以在设备的备份设置或你的 Google 账号中管理或删除。</li>
+            <li>你保存的备份和导出文件会一直留在你保存的位置，直到你将其删除。</li>
+            <li>Flitdo 写入日历的事件会一直留在该日历中，直到你在日历中删除；取消关联或卸载 Flitdo 不会删除它们。</li>
           </ul>
           <p>本应用不会向我们发送任何内容，因此我们不持有来自本应用的数据。如果你订阅，Google Play 提供的订单信息会保存在 Google Play 以及我们的账务记录中，保存期限以税务和会计规定的要求为准。卸载本应用会删除设备上的订阅记录；订阅本身仍保留在你的 Google 账号中，直到你取消。</p>
 
-          <h2 id="zh-security">9. 安全</h2>
+          <h2 id="zh-security">10. 安全</h2>
           <p>本应用将你的数据保存在应用私有存储中，Android 会将其与其他应用隔离。由于本应用不连接网络，你的数据不会经由本应用在网络上传输。我们建议你为设备设置屏幕锁，以保护你的任务隐私。</p>
 
-          <h2 id="zh-children">10. 儿童</h2>
+          <h2 id="zh-children">11. 儿童</h2>
           <p>Flitdo 是一款面向普通大众的效率工具，并非专为儿童设计。本应用不会收集任何人的个人信息，包括 13 岁以下的儿童。</p>
 
-          <h2 id="zh-website">11. 本网站</h2>
+          <h2 id="zh-website">12. 本网站</h2>
           <p>lyrels.github.io 是托管在 GitHub Pages 上的静态网站。本网站不使用 Cookie、统计分析或追踪脚本，也不从其他网站加载资源。如果你切换了页面语言，这一选择只保存在你自己的浏览器中。你访问本网站时，GitHub 可能会为运营和保障服务安全而收集你的 IP 地址等技术信息，详见 <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" rel="noopener">GitHub 通用隐私声明</a>。</p>
 
-          <h2 id="zh-emails">12. 你联系我们时</h2>
+          <h2 id="zh-emails">13. 你联系我们时</h2>
           <p>如果你给我们发送邮件，我们只会将你的邮箱地址和邮件内容用于回复你。我们不会与任何人分享这些信息，并会应你的要求删除与你的往来邮件。</p>
 
-          <h2 id="zh-changes">13. 本政策的变更</h2>
+          <h2 id="zh-changes">14. 本政策的变更</h2>
           <p>我们可能会不时更新本政策，例如在本应用增加新功能时。最新版本始终发布在本网址，并在上方注明“最近更新”日期。如果某项变更会影响你信息的处理方式（例如未来版本的应用将收集任何数据），我们会在该版本发布之前更新本政策。</p>
 
-          <h2 id="zh-contact">14. 联系方式</h2>
+          <h2 id="zh-contact">15. 联系方式</h2>
           <p>如果你对本政策或 Flitdo 有任何疑问，请联系我们：</p>
           <div class="contact-card">
             <strong>Lyrels</strong>
