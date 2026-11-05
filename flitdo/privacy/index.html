@@ -84,7 +84,7 @@
             <h2 id="summary">In short</h2>
             <ul>
               <li>Flitdo does <strong>not collect, transmit, sell or share</strong> any personal or sensitive user data.</li>
-              <li>Everything you enter is stored <strong>only on your device</strong>. There is no account or sign-up. The one exception is your choice: if you connect a task to one of your calendars, its title, date and time are written to that calendar (section 4).</li>
+              <li>Everything you enter is stored <strong>only on your device</strong>. There is no account or sign-up. The one exception is your choice: if you turn on two-way calendar sync, the title, date and time of your tasks with a date are written to the calendar you chose (section 4).</li>
               <li>The App contains <strong>no advertising, analytics or tracking</strong>, and no third-party SDKs that collect data.</li>
               <li>The App <strong>does not request Internet access</strong>, so it cannot send your data to us or to anyone else.</li>
               <li><strong>Flitdo Pro</strong> is an optional subscription sold through Google Play. Google handles the payment; we never see your card details or your Google account.</li>
@@ -92,7 +92,7 @@
           </div>
 
           <h2 id="collect">1. Information we collect</h2>
-          <p>We do not collect any information through the App. Lyrels does not operate any server for the App, and the App has no way to send data off your device: it does not request Android’s Internet permission and contains no advertising, analytics, crash-reporting or other third-party SDKs that collect data. We never receive, see, sell or share your tasks or anything else you enter in the App. If you subscribe to Flitdo Pro, Google Play handles the purchase and gives us only the order details described in section 8. If you connect a task to a calendar, the App writes that task’s title, date and time into the calendar on your device, and your calendar account may then sync it, as described in section 4.</p>
+          <p>We do not collect any information through the App. Lyrels does not operate any server for the App, and the App has no way to send data off your device: it does not request Android’s Internet permission and contains no advertising, analytics, crash-reporting or other third-party SDKs that collect data. We never receive, see, sell or share your tasks or anything else you enter in the App. If you subscribe to Flitdo Pro, Google Play handles the purchase and gives us only the order details described in section 8. If you turn on two-way calendar sync, the App writes the title, date and time of your tasks with a date into the calendar on your device, and your calendar account may then sync them, as described in section 4.</p>
 
           <h2 id="device">2. Information stored on your device</h2>
           <p>To work, the App stores the following in its private storage on your device. This data stays on your device and is not accessible to us.</p>
@@ -101,7 +101,7 @@
             <div><dt>Deleted tasks</dt><dd>A copy is kept for 15 seconds so you can undo the deletion, and is then permanently removed.</dd></div>
             <div><dt>Settings</dt><dd>Theme, language, smart-input options and your own input templates, floating-bubble settings, and reminder settings such as sound, follow-up reminders and quiet hours.</dd></div>
             <div><dt>Imported images</dt><dd>Images you choose as bubble icons through Android’s system file picker. They are re-encoded and saved in the App’s private storage. The App can access only the files you pick.</dd></div>
-            <div><dt>Calendar choices and links</dt><dd>If you use device calendars: which calendars you chose to show, whether their events appear in the home screen widget, and for each task you connected to an event, the event’s identifier and the last title, date and time both sides agreed on. This is kept apart from your other data and is not included in Android backups or in backup files you save.</dd></div>
+            <div><dt>Calendar choices and links</dt><dd>If you use calendar sync: which calendar account you chose, whether tasks sync both ways and to which calendar, whether events appear in the home screen widget, and for each synced task, the event’s identifier and the last title, date and time both sides agreed on. This is kept apart from your other data and is not included in Android backups or in backup files you save.</dd></div>
             <div><dt>Subscription record</dt><dd>If you subscribe to Flitdo Pro: the purchase record that Google Play gives the App (order number, plan, purchase time, purchase token and whether it renews) and when Google Play last confirmed it, so that Pro keeps working for a short time if Google Play cannot be reached. Also a random identifier created on your device; when you buy, the App gives Google Play a scrambled (hashed) form of it with the purchase, which says nothing about you. This record is not included in Android backups.</dd></div>
           </dl>
 
@@ -111,11 +111,11 @@
           <h2 id="calendars">4. Device calendars</h2>
           <p>Calendar features are optional and stay off until you set them up. Flitdo works only with the calendars already on your device through Android’s calendar storage. It does not sign in to Google, Microsoft or any other account, and it has no Internet access of its own.</p>
           <ul>
-            <li><strong>Showing events.</strong> If you allow calendar access and choose calendars, Flitdo reads the events of the day you are viewing in those calendars and shows them in the App, and in the home screen widget only if you turn that on. Reading events creates no tasks and keeps no copy of them; an event becomes a task only when you copy or connect it.</li>
-            <li><strong>Connecting a task and an event.</strong> Flitdo writes to a calendar only for a task you have confirmed to connect: it creates or updates that one event in the calendar you chose, with the task’s title, date and time, and keeps the two in step. Completion, reminders, repeat rules and other task details are never written. Deleting either side does not delete the other, and disconnecting keeps both.</li>
+            <li><strong>Showing events.</strong> If you allow calendar access and choose an account (Google, Outlook or the phone’s own calendar), Flitdo reads the events of the day you are viewing in that account’s visible calendars and shows them in the App, and in the home screen widget only if you turn that on. It may ask Android to refresh that account so recent changes arrive. Reading events creates no tasks and keeps no copy of them.</li>
+            <li><strong>Two-way sync for tasks.</strong> Flitdo writes to a calendar only after you turn on two-way sync: each task with a date then gets one event in the calendar you chose, with the task’s title, date and time, and the two are kept in step. Completion, reminders, repeat rules and other task details are never written. Deleting either side does not delete the other, and stopping sync keeps both.</li>
             <li><strong>Your calendar account.</strong> Events Flitdo writes are handled like any other event in that calendar. If the calendar belongs to an account that syncs, such as Google or Microsoft Outlook, that account’s own sync on your device may send the event to its servers, under that provider’s privacy policy. Lyrels never receives these events.</li>
           </ul>
-          <p>You can stop showing calendars, pause or disconnect connected tasks in the App’s settings, and withdraw calendar access in Android settings at any time.</p>
+          <p>You can switch two-way sync off or stop calendar sync in the App’s settings, and withdraw calendar access in Android settings at any time.</p>
 
           <h2 id="sounds">5. Custom reminder sounds</h2>
           <p>On Android 10 and later you can choose an audio file as a reminder sound, or with Flitdo Pro as the sound of alarm-style reminders. Because Android can only play notification sounds that are available outside an app’s private storage, Flitdo saves a validated copy of the file you choose in the shared <strong>Notifications/Flitdo</strong> folder on your device. Like other files in shared storage, this copy can be accessed by the system and by other apps that you have allowed to access audio or media files.</p>
@@ -130,7 +130,7 @@
             <li><strong>Foreground service</strong> — to keep the bubble available while you have it switched on, and to keep a reminder ringing until you stop it or the time you chose runs out. A notification is shown while it runs.</li>
             <li><strong>Vibrate</strong> — to vibrate when a reminder rings.</li>
             <li><strong>Run at startup</strong> — to restore your reminders (and the bubble, if you enabled it) after the device restarts or the App is updated.</li>
-            <li><strong>Calendar</strong> — only if you set up device calendars: to show events from the calendars you choose and to keep tasks you connect in step with their events (section 4). Android asks for it when you first set calendars up.</li>
+            <li><strong>Calendar</strong> — only if you set up calendar sync: to show events from the account you choose and, if you turn on two-way sync, to keep your tasks in step with their events (section 4). Android asks for it when you first set calendar sync up.</li>
             <li><strong>Google Play billing</strong> — to let you buy and manage Flitdo Pro through Google Play. The App uses it only to talk to the Google Play Store app on your device; versions that offer no purchase do not use it.</li>
           </ul>
           <p>Flitdo does not request access to the Internet, your location, contacts, camera, microphone, phone, SMS or device storage, and does not use the Android advertising ID.</p>
@@ -151,7 +151,7 @@
             <li>To remove all of the App’s data, clear its storage in Android settings or uninstall the App.</li>
             <li>Backup copies in your Google account can be managed or deleted in your device’s backup settings or your Google account.</li>
             <li>Backup and export files you saved stay where you saved them until you delete them.</li>
-            <li>Events Flitdo wrote to a calendar stay in that calendar until you delete them there; disconnecting a task or uninstalling Flitdo does not remove them.</li>
+            <li>Events Flitdo wrote to a calendar stay in that calendar until you delete them there; stopping sync or uninstalling Flitdo does not remove them.</li>
           </ul>
           <p>The App sends us nothing, so we hold no data from it. If you subscribe, the order details Google Play provides stay in Google Play and in our accounting records for as long as tax and accounting rules require. Uninstalling the App removes the subscription record on your device; the subscription itself stays with your Google account until you cancel it.</p>
 
@@ -211,7 +211,7 @@
             <h2 id="zh-summary">概要</h2>
             <ul>
               <li>Flitdo <strong>不收集、不传输、不出售、也不分享</strong>任何个人信息或敏感用户数据。</li>
-              <li>你输入的所有内容都<strong>只保存在你的设备上</strong>，无需账号，也无需注册。唯一的例外由你决定：如果你把某个任务与日历关联，它的标题、日期和时间会写入该日历（第 4 节）。</li>
+              <li>你输入的所有内容都<strong>只保存在你的设备上</strong>，无需账号，也无需注册。唯一的例外由你决定：如果你开启日历双向同步，带日期的任务的标题、日期和时间会写入你选择的日历（第 4 节）。</li>
               <li>本应用<strong>不含广告、统计分析或追踪功能</strong>，也不含任何会收集数据的第三方 SDK。</li>
               <li>本应用<strong>不申请联网权限</strong>，因此无法将你的数据发送给我们或任何其他人。</li>
               <li><strong>Flitdo Pro</strong> 是通过 Google Play 销售的可选订阅。付款由 Google 处理，我们看不到你的银行卡信息，也看不到你的 Google 账号。</li>
@@ -219,7 +219,7 @@
           </div>
 
           <h2 id="zh-collect">1. 我们收集的信息</h2>
-          <p>我们不通过本应用收集任何信息。Lyrels 没有为本应用运营任何服务器，本应用也无法将数据发送到设备之外：它不申请 Android 的联网（Internet）权限，也不包含任何广告、统计分析、崩溃上报或其他会收集数据的第三方 SDK。我们从不接收、查看、出售或分享你的任务以及你在本应用中输入的任何其他内容。如果你订阅 Flitdo Pro，购买由 Google Play 处理，我们只会收到第 8 节所述的订单信息。如果你把任务与日历关联，本应用会把该任务的标题、日期和时间写入你设备上的日历，之后你的日历账号可能会同步它，详见第 4 节。</p>
+          <p>我们不通过本应用收集任何信息。Lyrels 没有为本应用运营任何服务器，本应用也无法将数据发送到设备之外：它不申请 Android 的联网（Internet）权限，也不包含任何广告、统计分析、崩溃上报或其他会收集数据的第三方 SDK。我们从不接收、查看、出售或分享你的任务以及你在本应用中输入的任何其他内容。如果你订阅 Flitdo Pro，购买由 Google Play 处理，我们只会收到第 8 节所述的订单信息。如果你开启日历双向同步，本应用会把带日期的任务的标题、日期和时间写入你设备上的日历，之后你的日历账号可能会同步它们，详见第 4 节。</p>
 
           <h2 id="zh-device">2. 保存在你设备上的信息</h2>
           <p>为了正常运行，本应用会在你设备上的应用私有存储中保存以下内容。这些数据只保留在你的设备上，我们无法访问。</p>
@@ -228,7 +228,7 @@
             <div><dt>已删除的任务</dt><dd>保留一份副本 15 秒，以便你撤销删除，之后永久删除。</dd></div>
             <div><dt>设置</dt><dd>主题、语言、智能识别选项及你自定义的输入模板、悬浮气泡设置，以及提示音、持续提醒和免打扰时段等提醒设置。</dd></div>
             <div><dt>导入的图片</dt><dd>你通过 Android 系统文件选择器选作气泡图标的图片，经重新编码后保存在应用私有存储中。本应用只能访问你所选择的文件。</dd></div>
-            <div><dt>日历选择与关联</dt><dd>如果你使用设备日历：你选择显示哪些日历、这些日历的事件是否显示在桌面小组件中，以及每个与事件关联的任务所对应的事件标识和双方最近一致的标题、日期和时间。这些信息与你的其他数据分开保存，不会包含在 Android 备份或你保存的备份文件中。</dd></div>
+            <div><dt>日历选择与关联</dt><dd>如果你使用日历同步：你选择的日历账号、任务是否双向同步以及写入哪个日历、日程是否显示在桌面小组件中，以及每个已同步任务对应的事件标识和双方最近一致的标题、日期和时间。这些信息与你的其他数据分开保存，不会包含在 Android 备份或你保存的备份文件中。</dd></div>
             <div><dt>订阅记录</dt><dd>如果你订阅了 Flitdo Pro：Google Play 提供给本应用的购买记录（订单号、方案、购买时间、购买凭证以及是否自动续订），以及 Google Play 最近一次确认的时间，以便在暂时无法连接 Google Play 时 Pro 仍可短时间使用。此外还有一个在你设备上生成的随机标识；购买时，本应用会把它经不可逆处理（哈希）后的值随购买一起交给 Google Play，这个值不包含任何关于你的信息。订阅记录不会包含在 Android 备份中。</dd></div>
           </dl>
 
@@ -238,11 +238,11 @@
           <h2 id="zh-calendars">4. 设备日历</h2>
           <p>日历功能是可选的，在你设置之前一直关闭。Flitdo 只通过 Android 的日历存储使用你设备上已有的日历，不会登录 Google、Microsoft 或任何其他账号，本身也没有联网权限。</p>
           <ul>
-            <li><strong>显示事件。</strong>如果你允许访问日历并选择了日历，Flitdo 会读取这些日历中你正在查看的那一天的事件，显示在应用中；只有你开启后，才会显示在桌面小组件中。读取事件不会创建任务，也不会保留副本；只有你复制或关联某个事件时，它才会成为任务。</li>
-            <li><strong>关联任务与事件。</strong>只有对你确认关联的任务，Flitdo 才会写入日历：在你选择的日历中创建或更新这一个事件，写入任务的标题、日期和时间，并让两边保持一致。完成状态、提醒、重复规则和其他任务内容都不会写入。删除任何一边都不会删除另一边，取消关联会保留两边。</li>
+            <li><strong>显示日程。</strong>如果你允许访问日历并选择了一个账号（Google、Outlook 或手机自带的日历），Flitdo 会读取该账号中可见日历里你正在查看的那一天的日程，显示在应用中；只有你开启后，才会显示在桌面小组件中。Flitdo 可能会请 Android 刷新该账号，以便尽快拿到最新改动。读取日程不会创建任务，也不会保留副本。</li>
+            <li><strong>任务双向同步。</strong>只有在你开启双向同步后，Flitdo 才会写入日历：每个带日期的任务会在你选择的日历中对应一个事件，写入任务的标题、日期和时间，并让两边保持一致。完成状态、提醒、重复规则和其他任务内容都不会写入。删除任何一边都不会删除另一边，停止同步会保留两边。</li>
             <li><strong>你的日历账号。</strong>Flitdo 写入的事件与该日历中的其他事件一样处理。如果该日历属于会同步的账号（例如 Google 或 Microsoft Outlook），该账号在你设备上的同步功能可能会把事件发送到其服务器，适用该服务商的隐私政策。Lyrels 从不接收这些事件。</li>
           </ul>
-          <p>你可以随时在应用设置中停止显示日历、暂停或取消已关联的任务，也可以在 Android 设置中撤销日历权限。</p>
+          <p>你可以随时在应用设置中关闭双向同步或停止日历同步，也可以在 Android 设置中撤销日历权限。</p>
 
           <h2 id="zh-sounds">5. 自定义提醒音</h2>
           <p>在 Android 10 及以上版本中，你可以选择一个音频文件作为提醒音，订阅 Flitdo Pro 后也可以将其用作闹钟式提醒的铃声。由于 Android 只能播放位于应用私有存储之外的通知音，Flitdo 会将你选择的文件经校验后复制一份，保存到设备共享存储中的 <strong>Notifications/Flitdo</strong> 文件夹。与共享存储中的其他文件一样，系统以及你已授权访问音频或媒体文件的其他应用可以访问这份副本。</p>
@@ -257,7 +257,7 @@
             <li><strong>前台服务</strong>：在你开启气泡期间保持其可用，并让提醒持续响铃，直到你停止或到达你设定的时长。运行时会显示一条通知。</li>
             <li><strong>振动</strong>：在提醒响铃时振动。</li>
             <li><strong>开机启动</strong>：在设备重启或应用更新后，恢复你的提醒（以及你已开启的气泡）。</li>
-            <li><strong>日历</strong>：仅在你设置设备日历时使用，用于显示你所选日历中的事件，并让你关联的任务与对应事件保持一致（第 4 节）。Android 会在你首次设置日历时请求此权限。</li>
+            <li><strong>日历</strong>：仅在你设置日历同步时使用，用于显示你所选账号中的日程；开启双向同步后，也用于让你的任务与对应事件保持一致（第 4 节）。Android 会在你首次设置日历同步时请求此权限。</li>
             <li><strong>Google Play 结算</strong>：用于通过 Google Play 购买和管理 Flitdo Pro。本应用仅用它与你设备上的 Google Play 商店应用通信；不提供购买的版本不会使用此权限。</li>
           </ul>
           <p>Flitdo 不申请访问网络、位置、通讯录、相机、麦克风、电话、短信或设备存储的权限，也不使用 Android 广告 ID。</p>
@@ -278,7 +278,7 @@
             <li>如需删除本应用的全部数据，可在 Android 设置中清除本应用的存储空间，或卸载本应用。</li>
             <li>你 Google 账号中的备份副本，可以在设备的备份设置或你的 Google 账号中管理或删除。</li>
             <li>你保存的备份和导出文件会一直留在你保存的位置，直到你将其删除。</li>
-            <li>Flitdo 写入日历的事件会一直留在该日历中，直到你在日历中删除；取消关联或卸载 Flitdo 不会删除它们。</li>
+            <li>Flitdo 写入日历的事件会一直留在该日历中，直到你在日历中删除；停止同步或卸载 Flitdo 不会删除它们。</li>
           </ul>
           <p>本应用不会向我们发送任何内容，因此我们不持有来自本应用的数据。如果你订阅，Google Play 提供的订单信息会保存在 Google Play 以及我们的账务记录中，保存期限以税务和会计规定的要求为准。卸载本应用会删除设备上的订阅记录；订阅本身仍保留在你的 Google 账号中，直到你取消。</p>
 
