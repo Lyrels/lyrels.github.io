@@ -2,5 +2,9 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://lyrels.github.io/</loc><lastmod>2026-10-30</lastmod></url>
   <url><loc>https://lyrels.github.io/flitdo/</loc><lastmod>2026-10-30</lastmod></url>
-  <url><loc>https://lyrels.github.io/flitdo/privacy/</loc><lastmod>2026-11-04</lastmod></url>
+  <url><loc>https://lyrels.github.io/flitdo/privacy/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://lyrels.github.io/flitdo/privacy/zh-CN/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://lyrels.github.io/flitdo/privacy/zh-TW/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://lyrels.github.io/flitdo/privacy/ja/</loc><lastmod>2026-11-06</lastmod></url>
+  <url><loc>https://lyrels.github.io/flitdo/privacy/ko/</loc><lastmod>2026-11-06</lastmod></url>
 </urlset>

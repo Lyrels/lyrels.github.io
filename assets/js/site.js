@@ -1,4 +1,4 @@
-// Lyrels — small progressive enhancements. Pages work without this file (English is shown).
+// Lyrels progressive enhancements. Bilingual pages show English without this file.
 (function () {
   var root = document.documentElement;
   var KEY = 'lyrels-lang';
@@ -18,14 +18,16 @@
     }
   }
 
-  setLang(root.getAttribute('data-lang') === 'zh' ? 'zh' : 'en', false);
+  if (!root.hasAttribute('data-static-lang')) {
+    setLang(root.getAttribute('data-lang') === 'zh' ? 'zh' : 'en', false);
 
-  var toggle = document.querySelector('.lang-toggle');
-  if (toggle) {
-    toggle.hidden = false;
-    toggle.addEventListener('click', function () {
-      setLang(root.getAttribute('data-lang') === 'zh' ? 'en' : 'zh', true);
-    });
+    var toggle = document.querySelector('.lang-toggle');
+    if (toggle) {
+      toggle.hidden = false;
+      toggle.addEventListener('click', function () {
+        setLang(root.getAttribute('data-lang') === 'zh' ? 'en' : 'zh', true);
+      });
+    }
   }
 
   // Header hairline once the page scrolls.

@@ -431,6 +431,10 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
 .crumbs a:hover { color: var(--ink); }
 .doc-head h1 { font-size: clamp(34px, 5vw, 52px); margin-top: 20px; }
 .doc-head .dates { color: var(--muted); font-size: 15px; margin-top: 14px; display: flex; flex-wrap: wrap; gap: 4px 20px; }
+.policy-languages { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 6px 10px; }
+.policy-languages a { display: inline-block; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 14px; text-decoration: none; }
+.policy-languages a:hover { border-color: var(--muted); }
+.policy-languages [aria-current="page"] { background: var(--brand-soft); color: var(--brand-strong); border-color: var(--brand); }
 
 .doc .wrap { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; padding-top: 48px; }
 .toc { position: sticky; top: 96px; align-self: start; font-size: 14px; }

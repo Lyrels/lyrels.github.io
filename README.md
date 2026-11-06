@@ -14,16 +14,20 @@ Plain static HTML and CSS — no build step, no frameworks, no external requests
 cookies or analytics). `.nojekyll` tells GitHub Pages to publish the files as they are.
 
 ## Languages
-Every page is bilingual (English and Simplified Chinese). Text comes in pairs:
+The brand and product pages are bilingual (English and Simplified Chinese). Text comes in pairs:
 `<span class="en">…</span><span class="zh">…</span>`; the `data-lang` attribute on `<html>` decides
 which one shows. The language is picked from `?lang=en|zh`, then the visitor's saved choice, then the
 browser language. Without JavaScript the English text is shown.
+
+The Flitdo privacy policy has five static language pages. Its main URL uses the requested language,
+then the saved choice, then the browser language, with English as the fallback. The language links
+also work without JavaScript. The older `?lang=zh` URL still opens Simplified Chinese.
 
 ## Structure
 ```
 index.html                 brand home
 flitdo/index.html          Flitdo product page
-flitdo/privacy/index.html  Flitdo privacy policy (EN + 简体中文)
+flitdo/privacy/            Flitdo privacy policy (EN, 简体中文, 繁體中文, 日本語, 한국어)
 flitdo/review/             review access: decrypting page and the encrypted certificate
 404.html
 assets/css/site.css        all styles; colours mirror the Flitdo app palette
@@ -44,7 +48,7 @@ Push to `main`. GitHub Pages publishes the repository root of the default branch
 (Settings → Pages → *Deploy from a branch* → `main` / `/ (root)`).
 
 ## Updating the privacy policy
-Edit both language versions in `flitdo/privacy/index.html` and change the **Last updated** date
-(both languages) and `<lastmod>` in `sitemap.xml`. Update the policy **before** shipping an app
+Edit each language's `index.html` under `flitdo/privacy/` and change the **Last updated** date
+and corresponding `<lastmod>` in `sitemap.xml`. Update the policy **before** shipping an app
 version that changes how data is handled — for example adding network access, in-app purchases,
 analytics or crash reporting — and update the Data safety form in Play Console to match.
