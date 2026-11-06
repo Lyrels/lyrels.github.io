@@ -431,10 +431,26 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
 .crumbs a:hover { color: var(--ink); }
 .doc-head h1 { font-size: clamp(34px, 5vw, 52px); margin-top: 20px; }
 .doc-head .dates { color: var(--muted); font-size: 15px; margin-top: 14px; display: flex; flex-wrap: wrap; gap: 4px 20px; }
-.policy-languages { margin-top: 20px; display: flex; flex-wrap: wrap; gap: 6px 10px; }
-.policy-languages a { display: inline-block; padding: 6px 10px; border: 1px solid var(--line); border-radius: 8px; color: var(--ink); font-size: 14px; text-decoration: none; }
-.policy-languages a:hover { border-color: var(--muted); }
-.policy-languages [aria-current="page"] { background: var(--brand-soft); color: var(--brand-strong); border-color: var(--brand); }
+.policy-language-menu { position: relative; }
+.policy-nav > a { white-space: nowrap; }
+.policy-language-menu > summary {
+  display: flex; align-items: center; justify-content: center; gap: 7px;
+  list-style: none; white-space: nowrap;
+}
+.policy-language-menu > summary::-webkit-details-marker { display: none; }
+.policy-language-menu > summary::after {
+  content: ""; width: 6px; height: 6px;
+  border: solid currentColor; border-width: 0 1px 1px 0;
+  transform: translateY(-2px) rotate(45deg);
+}
+.policy-languages {
+  position: absolute; inset-block-start: calc(100% + 8px); inset-inline-end: 0;
+  display: grid; min-width: 128px; padding: 4px;
+  background: var(--surface); border: 1px solid var(--line); border-radius: 12px;
+}
+.policy-language-menu:not([open]) > .policy-languages { display: none; }
+.policy-languages a { padding: 8px 12px; border-radius: 8px; font-size: 14px; white-space: nowrap; }
+.policy-languages [aria-current="page"] { background: var(--brand-soft); color: var(--brand-strong); }
 
 .doc .wrap { display: grid; grid-template-columns: 220px minmax(0, 1fr); gap: 56px; padding-top: 48px; }
 .toc { position: sticky; top: 96px; align-self: start; font-size: 14px; }
@@ -499,6 +515,7 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
   .nav .hide-sm { display: none; }
   .nav a { padding: 6px 10px; }
   .site-header .wrap { gap: 12px; }
+  .policy-language-menu > summary { padding-inline: 8px; margin-inline-start: 0; }
   .section { padding: 72px 0; }
   .section-head { margin-bottom: 32px; }
   .hero { padding: 64px 0 72px; }
@@ -523,4 +540,8 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
   .doc .wrap { padding-top: 32px; }
   .prose .summary { padding: 20px; }
   .site-footer { margin-top: 72px; }
+}
+
+@media (max-width: 400px) {
+  .policy-nav > a[aria-current="page"] { display: none; }
 }

@@ -2,6 +2,20 @@
   var key = 'flitdo-privacy-lang';
   var locale = document.documentElement.lang;
 
+  document.addEventListener('DOMContentLoaded', function () {
+    var menu = document.querySelector('.policy-language-menu');
+    if (!menu) return;
+    document.addEventListener('click', function (event) {
+      if (menu.open && !menu.contains(event.target)) menu.open = false;
+    });
+    menu.addEventListener('keydown', function (event) {
+      if (menu.open && event.key === 'Escape') {
+        menu.open = false;
+        menu.querySelector('summary').focus();
+      }
+    });
+  });
+
   function language(tag) {
     if (!tag) return null;
     if (/^zh(?:-(?:Hant|TW|HK|MO))\b/i.test(tag)) return 'zh-TW';
