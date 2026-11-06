@@ -6,6 +6,9 @@
   <title>Lyrels — Small apps, made with care</title>
   <meta name="title-en" content="Lyrels — Small apps, made with care">
   <meta name="title-zh" content="Lyrels — 小而专注的应用，用心打造">
+  <meta name="title-zh-tw" content="Lyrels · 用心打造的小工具">
+  <meta name="title-ja" content="Lyrels · 日々に役立つ小さなアプリ">
+  <meta name="title-ko" content="Lyrels · 정성껏 만든 작은 앱">
   <meta name="description" content="Lyrels builds small, focused apps that respect your privacy. Meet Flitdo, a minimal Android to-do app with a floating quick-add bubble.">
   <link rel="canonical" href="https://lyrels.github.io/">
   <link rel="icon" href="/assets/img/lyrels-favicon.png" type="image/png">
@@ -18,24 +21,33 @@
   <meta property="og:description" content="Small, focused apps that respect your privacy.">
   <meta property="og:image" content="https://lyrels.github.io/assets/img/lyrels-avatar-360.jpg">
   <meta property="og:url" content="https://lyrels.github.io/">
-  <script>(function(){var r=document.documentElement,l=null,q=/[?&]lang=(en|zh)\b/.exec(location.search);if(q){l=q[1];try{localStorage.setItem('lyrels-lang',l)}catch(e){}}if(!l){try{l=localStorage.getItem('lyrels-lang')}catch(e){}}if(l!=='en'&&l!=='zh'){l=/^zh/i.test(navigator.language||'')?'zh':'en'}r.setAttribute('data-lang',l);r.lang=l==='zh'?'zh-CN':'en'})();</script>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/language.js?v=site-languages"></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=site-languages">
+  <script src="/assets/js/site.js?v=site-languages" defer></script>
 </head>
 <body>
-  <a class="skip" href="#main"><span class="en">Skip to content</span><span class="zh">跳到正文</span></a>
+  <a class="skip" href="#main"><span class="en">Skip to content</span><span class="zh">跳到正文</span><span class="zh-tw">跳至正文</span><span class="ja">本文へ移動</span><span class="ko">본문으로 이동</span></a>
 
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Lyrels home">
+      <a class="brand" href="/" aria-label="Lyrels home" data-aria-label-zh="Lyrels 首页" data-aria-label-zh-tw="Lyrels 首頁" data-aria-label-ja="Lyrels ホーム" data-aria-label-ko="Lyrels 홈">
         <img class="avatar" src="/assets/img/lyrels-avatar.jpg" alt="" width="30" height="30">
         Lyrels
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav policy-nav" aria-label="Main" data-aria-label-zh="主导航" data-aria-label-zh-tw="主要導覽" data-aria-label-ja="メインナビゲーション" data-aria-label-ko="기본 탐색">
         <a href="/flitdo/">Flitdo</a>
-        <a class="hide-sm" href="/flitdo/privacy/"><span class="en">Privacy</span><span class="zh">隐私政策</span></a>
-        <a class="hide-sm" href="#contact"><span class="en">Contact</span><span class="zh">联系</span></a>
-        <button class="lang-toggle" type="button" hidden>中文</button>
+        <a class="hide-sm" href="/flitdo/privacy/"><span class="en">Privacy</span><span class="zh">隐私政策</span><span class="zh-tw">隱私權政策</span><span class="ja">プライバシー</span><span class="ko">개인정보</span></a>
+        <a class="hide-sm" href="#contact"><span class="en">Contact</span><span class="zh">联系</span><span class="zh-tw">聯絡</span><span class="ja">お問い合わせ</span><span class="ko">문의</span></a>
+        <details class="policy-language-menu">
+          <summary class="lang-toggle"><span class="en" lang="en">English</span><span class="zh" lang="zh-CN">简体中文</span><span class="zh-tw" lang="zh-TW">繁體中文</span><span class="ja" lang="ja">日本語</span><span class="ko" lang="ko">한국어</span></summary>
+          <div class="policy-languages">
+            <a href="?lang=en" lang="en" hreflang="en">English</a>
+            <a href="?lang=zh-CN" lang="zh-CN" hreflang="zh-CN">简体中文</a>
+            <a href="?lang=zh-TW" lang="zh-TW" hreflang="zh-TW">繁體中文</a>
+            <a href="?lang=ja" lang="ja" hreflang="ja">日本語</a>
+            <a href="?lang=ko" lang="ko" hreflang="ko">한국어</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -43,21 +55,30 @@
   <main id="main">
     <section class="hero">
       <div class="wrap">
-        <span class="badge"><span class="en">Independent software</span><span class="zh">独立软件开发</span></span>
+        <span class="badge"><span class="en">Independent software</span><span class="zh">独立软件开发</span><span class="zh-tw">獨立軟體開發</span><span class="ja">独立系ソフトウェア</span><span class="ko">독립 소프트웨어</span></span>
         <h1 style="margin-top:24px">
           <span class="en">Small apps, <span class="accent">made with care.</span></span>
           <span class="zh">小而专注的应用，<span class="accent">用心打造。</span></span>
+          <span class="zh-tw">小巧專注的應用程式，<span class="accent">用心打造。</span></span>
+          <span class="ja">日々に役立つ、小さなアプリを。<span class="accent">ひとつずつ丁寧に。</span></span>
+          <span class="ko">일상을 위한 작은 앱, <span class="accent">정성껏 만듭니다.</span></span>
         </h1>
         <p class="lede">
           <span class="en">Lyrels builds focused tools for everyday life — quick to use, calm to look at, and private by default. Your data belongs on your device.</span>
           <span class="zh">Lyrels 为日常生活打造专注的小工具：上手快、界面安静、默认保护隐私。你的数据，应该留在你自己的设备上。</span>
+          <span class="zh-tw">Lyrels 打造專注於日常需求的小工具，操作快速、介面清爽，預設重視隱私。你的資料由你掌握。</span>
+          <span class="ja">Lyrels は、すばやく使えて、見た目がすっきりし、プライバシーにも配慮した日常のツールを作っています。データは自分の手元で管理できます。</span>
+          <span class="ko">Lyrels는 일상에서 빠르게 쓸 수 있고 화면이 간결하며 기본적으로 개인정보를 보호하는 도구를 만듭니다. 내 데이터는 내가 관리할 수 있어야 합니다.</span>
         </p>
         <div class="actions">
           <a class="btn btn-primary" href="/flitdo/">
             <span class="en">Meet Flitdo</span><span class="zh">了解 Flitdo</span>
+            <span class="zh-tw">認識 Flitdo</span>
+            <span class="ja">Flitdo を見る</span>
+            <span class="ko">Flitdo 소개</span>
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
           </a>
-          <a class="btn btn-ghost" href="#contact"><span class="en">Get in touch</span><span class="zh">联系我们</span></a>
+          <a class="btn btn-ghost" href="#contact"><span class="en">Get in touch</span><span class="zh">联系我们</span><span class="zh-tw">與我們聯絡</span><span class="ja">問い合わせる</span><span class="ko">문의하기</span></a>
         </div>
       </div>
     </section>
@@ -65,8 +86,8 @@
     <section class="section" id="products" aria-labelledby="products-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow"><span class="en">Products</span><span class="zh">产品</span></span>
-          <h2 id="products-title"><span class="en">What we make</span><span class="zh">我们的作品</span></h2>
+          <span class="eyebrow"><span class="en">Products</span><span class="zh">产品</span><span class="zh-tw">產品</span><span class="ja">製品</span><span class="ko">제품</span></span>
+          <h2 id="products-title"><span class="en">What we make</span><span class="zh">我们的作品</span><span class="zh-tw">我們的作品</span><span class="ja">私たちが作るもの</span><span class="ko">우리가 만드는 앱</span></h2>
         </div>
 
         <article class="product">
@@ -75,28 +96,31 @@
               <img src="/assets/img/flitdo-icon.svg" alt="" width="64" height="64">
               <div>
                 <h3>Flitdo</h3>
-                <p class="tagline"><span class="en">Capture it. Get it done.</span><span class="zh">随手记下，轻松完成。</span></p>
+                <p class="tagline"><span class="en">Capture it. Get it done.</span><span class="zh">随手记下，轻松完成。</span><span class="zh-tw">隨手記下，輕鬆完成。</span><span class="ja">さっとメモして、きちんと片づける。</span><span class="ko">빠르게 적고, 제때 끝내세요.</span></p>
               </div>
             </div>
             <p class="desc">
               <span class="en">A minimal to-do app for Android with a floating quick-add bubble. Jot a task down from any app, let Flitdo read the date and time from what you typed, and get reminded right on time.</span>
               <span class="zh">一款简洁的 Android 待办应用，带有悬浮快速添加气泡。在任何应用里随手记下任务，Flitdo 会从你输入的文字中识别日期和时间，并准时提醒你。</span>
+              <span class="zh-tw">一款簡潔的 Android 待辦事項應用程式，附有快速新增的懸浮按鈕。從其他應用程式也能記下待辦事項，讓 Flitdo 辨識輸入的日期與時間，並在指定時間提醒你。</span>
+              <span class="ja">Android 向けのシンプルなタスク管理アプリです。フローティングバブルで他のアプリを開いたままタスクを追加できます。Flitdo が入力された日付や時刻を読み取り、時間になったらお知らせします。</span>
+              <span class="ko">빠른 추가용 플로팅 버블을 갖춘 간결한 Android 할 일 앱입니다. 다른 앱을 쓰는 중에도 할 일을 적으면 Flitdo가 입력한 날짜와 시간을 인식해 제때 알려 줍니다.</span>
             </p>
             <ul>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">Quick add from anywhere with the floating bubble</span><span class="zh">悬浮气泡，在任何界面快速添加</span></span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">Understands dates and times in English and Chinese, offline</span><span class="zh">离线识别中英文日期和时间</span></span></li>
-              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">No account, no ads, no tracking — tasks stay on your phone</span><span class="zh">无需账号、无广告、无追踪，任务只存在你的手机上</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">Quick add from anywhere with the floating bubble</span><span class="zh">悬浮气泡，在任何界面快速添加</span><span class="zh-tw">用懸浮按鈕在任何畫面快速新增</span><span class="ja">フローティングバブルで他のアプリからもすばやく追加</span><span class="ko">플로팅 버블로 다른 앱에서도 빠르게 추가</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">Understands dates and times in English and Chinese, offline</span><span class="zh">离线识别中英文日期和时间</span><span class="zh-tw">離線辨識中英文的日期與時間</span><span class="ja">英語と中国語の日付や時刻をオフラインで認識</span><span class="ko">영어와 중국어로 입력한 날짜와 시간을 오프라인에서 인식</span></span></li>
+              <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg><span><span class="en">No account, ads or tracking. Tasks are stored on your device.</span><span class="zh">无需账号，无广告或追踪，任务保存在你的设备上。</span><span class="zh-tw">無需帳戶、無廣告、無追蹤，任務儲存在裝置上</span><span class="ja">アカウント不要。広告や追跡なし。タスクは端末に保存</span><span class="ko">계정, 광고, 추적 없이 할 일을 기기에 저장</span></span></li>
             </ul>
             <div class="actions">
-              <a class="btn btn-primary" href="/flitdo/"><span class="en">Learn more</span><span class="zh">了解更多</span></a>
-              <a class="btn btn-ghost" href="/flitdo/privacy/"><span class="en">Privacy policy</span><span class="zh">隐私政策</span></a>
+              <a class="btn btn-primary" href="/flitdo/"><span class="en">Learn more</span><span class="zh">了解更多</span><span class="zh-tw">瞭解更多</span><span class="ja">詳しく見る</span><span class="ko">자세히 보기</span></a>
+              <a class="btn btn-ghost" href="/flitdo/privacy/"><span class="en">Privacy policy</span><span class="zh">隐私政策</span><span class="zh-tw">隱私權政策</span><span class="ja">プライバシーポリシー</span><span class="ko">개인정보 처리방침</span></a>
             </div>
           </div>
           <div class="product-visual" aria-hidden="true">
             <img class="big-icon" src="/assets/img/flitdo-icon.svg" alt="" width="148" height="148">
-            <span class="chip c1"><i style="background:var(--soon)"></i><span class="en">Dentist · 3:00 PM</span><span class="zh">看牙医 · 15:00</span></span>
-            <span class="chip c2"><i style="background:var(--normal)"></i><span class="en">Call mom · Fri</span><span class="zh">给妈妈打电话 · 周五</span></span>
-            <span class="chip c3"><i style="background:var(--done)"></i><span class="en">Buy milk · Done</span><span class="zh">买牛奶 · 已完成</span></span>
+            <span class="chip c1"><i style="background:var(--soon)"></i><span class="en">Dentist · 3:00 PM</span><span class="zh">看牙医 · 15:00</span><span class="zh-tw">看牙醫 · 15:00</span><span class="ja">歯医者 · 15:00</span><span class="ko">치과 · 오후 3:00</span></span>
+            <span class="chip c2"><i style="background:var(--normal)"></i><span class="en">Call mom · Fri</span><span class="zh">给妈妈打电话 · 周五</span><span class="zh-tw">打電話給媽媽 · 週五</span><span class="ja">母に電話 · 金曜</span><span class="ko">엄마에게 전화 · 금요일</span></span>
+            <span class="chip c3"><i style="background:var(--done)"></i><span class="en">Buy milk · Done</span><span class="zh">买牛奶 · 已完成</span><span class="zh-tw">買牛奶 · 已完成</span><span class="ja">牛乳を買う · 完了</span><span class="ko">우유 사기 · 완료</span></span>
           </div>
         </article>
       </div>
@@ -105,24 +129,24 @@
     <section class="section" aria-labelledby="principles-title">
       <div class="wrap">
         <div class="section-head">
-          <span class="eyebrow"><span class="en">How we work</span><span class="zh">我们的原则</span></span>
-          <h2 id="principles-title"><span class="en">Three things we don’t compromise on</span><span class="zh">我们坚持的三件事</span></h2>
+          <span class="eyebrow"><span class="en">How we work</span><span class="zh">我们的原则</span><span class="zh-tw">我們的原則</span><span class="ja">私たちの方針</span><span class="ko">우리가 일하는 방식</span></span>
+          <h2 id="principles-title"><span class="en">Three things we don’t compromise on</span><span class="zh">我们坚持的三件事</span><span class="zh-tw">我們堅持的三件事</span><span class="ja">大切にしている3つのこと</span><span class="ko">우리가 중요하게 여기는 세 가지</span></h2>
         </div>
         <div class="grid-3">
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="3.5"/></svg></div>
-            <h3><span class="en">Focused</span><span class="zh">专注</span></h3>
-            <p><span class="en">Each app does one job well. Fewer screens, fewer settings you never touch, and nothing that gets in your way.</span><span class="zh">每个应用只把一件事做好。更少的页面，没有用不上的设置，不打扰你。</span></p>
+            <h3><span class="en">Focused</span><span class="zh">专注</span><span class="zh-tw">專注</span><span class="ja">機能を絞る</span><span class="ko">핵심에 집중</span></h3>
+            <p><span class="en">Each app does one job well. Fewer screens, fewer settings you never touch, and nothing that gets in your way.</span><span class="zh">每个应用只把一件事做好。更少的页面，没有用不上的设置，不打扰你。</span><span class="zh-tw">每個應用程式都專心把一件事做好。減少頁面和用不到的設定，讓你專心處理眼前的事。</span><span class="ja">一つのアプリで、一つの仕事を丁寧にこなせるようにします。画面や使わない設定を減らし、作業を邪魔しません。</span><span class="ko">앱마다 한 가지 일을 잘하도록 만듭니다. 화면과 잘 쓰지 않는 설정을 줄여 하던 일에 집중할 수 있게 합니다.</span></p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="10.5" width="14" height="10" rx="2.5"/><path d="M8 10.5V8a4 4 0 0 1 8 0v2.5"/></svg></div>
-            <h3><span class="en">Private by default</span><span class="zh">默认保护隐私</span></h3>
-            <p><span class="en">No accounts, ads or analytics unless a feature truly needs them. What you write stays on your device.</span><span class="zh">除非功能确实需要，否则不做账号、广告和统计分析。你写下的内容只留在你的设备上。</span></p>
+            <h3><span class="en">Private by default</span><span class="zh">默认保护隐私</span><span class="zh-tw">預設保護隱私</span><span class="ja">最初からプライバシーに配慮</span><span class="ko">기본적으로 개인정보 보호</span></h3>
+            <p><span class="en">We only consider accounts, ads or analytics when a feature needs them. Your input is stored on your device.</span><span class="zh">只有功能确实需要时，才考虑账号、广告或分析。你输入的内容保存在自己的设备上。</span><span class="zh-tw">功能確有需要時才考慮帳戶、廣告或分析。你輸入的內容會儲存在自己的裝置上。</span><span class="ja">機能に必要な場合に限り、アカウント、広告、分析の利用を検討します。入力した内容は端末に保存されます。</span><span class="ko">기능에 꼭 필요한 경우에만 계정, 광고, 분석 기능을 고려합니다. 입력한 내용은 내 기기에 저장됩니다.</span></p>
           </div>
           <div class="card">
             <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.3 2.4 3.5 5.2 3.5 8.5s-1.2 6.1-3.5 8.5c-2.3-2.4-3.5-5.2-3.5-8.5S9.7 5.9 12 3.5z"/></svg></div>
-            <h3><span class="en">Made for everyone</span><span class="zh">为每个人设计</span></h3>
-            <p><span class="en">English and Chinese, light and dark, screen readers, phones, tablets and foldables — details are part of the product.</span><span class="zh">中文与英文、浅色与深色、读屏、手机、平板与折叠屏——细节本身就是产品的一部分。</span></p>
+            <h3><span class="en">Made for everyone</span><span class="zh">为每个人设计</span><span class="zh-tw">為每個人設計</span><span class="ja">誰でも使いやすく</span><span class="ko">누구나 쓰기 쉽게</span></h3>
+            <p><span class="en">Multilingual interfaces, light and dark themes, screen readers, and support for phones, tablets and foldables are part of the product.</span><span class="zh">多语言界面、浅色和深色主题、读屏，以及对手机、平板和折叠屏的支持，都是产品的一部分。</span><span class="zh-tw">多語言介面、淺色與深色主題、螢幕閱讀器，以及手機、平板與摺疊螢幕支援，都是產品的一部分。</span><span class="ja">多言語、ライト・ダークテーマ、スクリーンリーダー、スマートフォン・タブレット・折りたたみ端末への対応も、製品の大切な一部です。</span><span class="ko">다국어, 밝은 테마와 어두운 테마, 화면 읽기 기능, 휴대전화와 태블릿 및 폴더블 지원까지 제품의 일부로 생각합니다.</span></p>
           </div>
         </div>
       </div>
@@ -132,12 +156,15 @@
       <div class="wrap">
         <div class="contact">
           <div>
-            <h2 id="contact-title"><span class="en">Questions or feedback?</span><span class="zh">有问题或建议？</span></h2>
-            <p><span class="en">We read every message. Write to us at lyzuwh@gmail.com.</span><span class="zh">每一封邮件我们都会认真阅读。来信请寄 lyzuwh@gmail.com。</span></p>
+            <h2 id="contact-title"><span class="en">Questions or feedback?</span><span class="zh">有问题或建议？</span><span class="zh-tw">有問題或建議嗎？</span><span class="ja">ご質問やご意見はありますか？</span><span class="ko">질문이나 의견이 있나요?</span></h2>
+            <p><span class="en">We read every message. Write to us at lyzuwh@gmail.com.</span><span class="zh">每一封邮件我们都会认真阅读。来信请寄 lyzuwh@gmail.com。</span><span class="zh-tw">我們會閱讀每一封來信。歡迎寄信至 lyzuwh@gmail.com。</span><span class="ja">いただいたメールにはすべて目を通します。lyzuwh@gmail.com までお寄せください。</span><span class="ko">보내 주신 메시지는 모두 읽습니다. lyzuwh@gmail.com으로 연락해 주세요.</span></p>
           </div>
           <a class="btn btn-primary" href="mailto:lyzuwh@gmail.com">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="3"/><path d="M4 7.5l8 6 8-6"/></svg>
             <span class="en">Email us</span><span class="zh">发送邮件</span>
+            <span class="zh-tw">寄送電子郵件</span>
+            <span class="ja">メールを送る</span>
+            <span class="ko">이메일 보내기</span>
           </a>
         </div>
       </div>
@@ -146,16 +173,16 @@
 
   <footer class="site-footer">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Lyrels home">
+      <a class="brand" href="/" aria-label="Lyrels home" data-aria-label-zh="Lyrels 首页" data-aria-label-zh-tw="Lyrels 首頁" data-aria-label-ja="Lyrels ホーム" data-aria-label-ko="Lyrels 홈">
         <img class="avatar" src="/assets/img/lyrels-avatar.jpg" alt="" width="30" height="30">
         Lyrels
       </a>
-      <nav aria-label="Footer">
+      <nav aria-label="Footer" data-aria-label-zh="页脚导航" data-aria-label-zh-tw="頁尾導覽" data-aria-label-ja="フッターナビゲーション" data-aria-label-ko="하단 탐색">
         <a href="/flitdo/">Flitdo</a>
-        <a href="/flitdo/privacy/"><span class="en">Flitdo Privacy Policy</span><span class="zh">Flitdo 隐私政策</span></a>
+        <a href="/flitdo/privacy/"><span class="en">Flitdo Privacy Policy</span><span class="zh">Flitdo 隐私政策</span><span class="zh-tw">Flitdo 隱私權政策</span><span class="ja">Flitdo プライバシーポリシー</span><span class="ko">Flitdo 개인정보 처리방침</span></a>
         <a href="mailto:lyzuwh@gmail.com">lyzuwh@gmail.com</a>
       </nav>
-      <small>© <span data-year>2026</span> Lyrels. <span class="en">All rights reserved.</span><span class="zh">保留所有权利。</span></small>
+      <small>© <span data-year>2026</span> Lyrels. <span class="en">All rights reserved.</span><span class="zh">保留所有权利。</span><span class="zh-tw">保留所有權利。</span><span class="ja">すべての権利を留保します。</span><span class="ko">모든 권리 보유.</span></small>
     </div>
   </footer>
 </body>

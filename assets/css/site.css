@@ -72,9 +72,13 @@
   color-scheme: dark;
 }
 
-/* Language switching: elements carry class "en" or "zh"; the root says which one shows. */
-html[data-lang="en"] .zh,
-html[data-lang="zh"] .en { display: none !important; }
+/* The site root selects which localized text is visible. */
+html[data-lang]:not([data-lang="en"]) .en,
+html[data-lang]:not([data-lang="zh"]) .zh,
+html[data-lang]:not([data-lang="zh-tw"]) .zh-tw,
+html[data-lang]:not([data-lang="ja"]) .ja,
+html[data-lang]:not([data-lang="ko"]) .ko { display: none !important; }
+html[lang="ko"] { word-break: keep-all; overflow-wrap: anywhere; }
 
 *, *::before, *::after { box-sizing: border-box; }
 
@@ -174,7 +178,8 @@ p { margin: 0; text-wrap: pretty; }
 .eyebrow {
   font-size: 13px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--brand);
 }
-html[data-lang="zh"] .eyebrow { letter-spacing: .2em; }
+html[data-lang="zh"] .eyebrow,
+html[data-lang="zh-tw"] .eyebrow { letter-spacing: .2em; }
 
 /* ---------- Sections ---------- */
 
@@ -193,7 +198,8 @@ html[data-lang="zh"] .eyebrow { letter-spacing: .2em; }
   pointer-events: none; z-index: -1;
 }
 .hero h1 { font-size: clamp(40px, 7vw, 76px); max-width: 15ch; letter-spacing: -0.035em; }
-html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
+html[data-lang="zh"] .hero h1,
+html[data-lang="zh-tw"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
 .hero h1 .accent { color: var(--brand); }
 .hero .lede { font-size: clamp(18px, 2.2vw, 21px); color: var(--muted); max-width: 560px; margin-top: 24px; }
 .hero .actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 36px; }
@@ -519,8 +525,10 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
   .section { padding: 72px 0; }
   .section-head { margin-bottom: 32px; }
   .hero { padding: 64px 0 72px; }
-  .grid-3, .features { grid-template-columns: 1fr; }
-  .feature.wide { grid-column: auto; grid-template-columns: 1fr; gap: 20px; }
+  .grid-3, .features { grid-template-columns: minmax(0, 1fr); }
+  .feature.wide { grid-column: auto; grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .feature .examples div { flex-wrap: wrap; }
+  .feature .examples span { white-space: normal; }
   .product { padding: 24px; border-radius: 22px; }
   .product-visual .chip { font-size: 12px; padding: 6px 11px; }
   .contact { padding: 32px 24px; border-radius: 22px; }
@@ -543,5 +551,6 @@ html[data-lang="zh"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
 }
 
 @media (max-width: 400px) {
-  .policy-nav > a[aria-current="page"] { display: none; }
+  .policy-nav > a[aria-current="page"],
+  .policy-nav > a[href="/flitdo/privacy/"] { display: none; }
 }

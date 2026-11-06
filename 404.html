@@ -6,24 +6,36 @@
   <title>Page not found — Lyrels</title>
   <meta name="title-en" content="Page not found — Lyrels">
   <meta name="title-zh" content="页面不存在 — Lyrels">
+  <meta name="title-zh-tw" content="找不到頁面 · Lyrels">
+  <meta name="title-ja" content="ページが見つかりません · Lyrels">
+  <meta name="title-ko" content="페이지를 찾을 수 없습니다 · Lyrels">
   <meta name="robots" content="noindex">
   <link rel="icon" href="/assets/img/lyrels-favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="/assets/img/lyrels-touch-icon.png">
-  <script>(function(){var r=document.documentElement,l=null,q=/[?&]lang=(en|zh)\b/.exec(location.search);if(q){l=q[1];try{localStorage.setItem('lyrels-lang',l)}catch(e){}}if(!l){try{l=localStorage.getItem('lyrels-lang')}catch(e){}}if(l!=='en'&&l!=='zh'){l=/^zh/i.test(navigator.language||'')?'zh':'en'}r.setAttribute('data-lang',l);r.lang=l==='zh'?'zh-CN':'en'})();</script>
-  <link rel="stylesheet" href="/assets/css/site.css">
-  <script src="/assets/js/site.js" defer></script>
+  <script src="/assets/js/language.js?v=site-languages"></script>
+  <link rel="stylesheet" href="/assets/css/site.css?v=site-languages">
+  <script src="/assets/js/site.js?v=site-languages" defer></script>
 </head>
 <body>
   <header class="site-header">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Lyrels home">
+      <a class="brand" href="/" aria-label="Lyrels home" data-aria-label-zh="Lyrels 首页" data-aria-label-zh-tw="Lyrels 首頁" data-aria-label-ja="Lyrels ホーム" data-aria-label-ko="Lyrels 홈">
         <img class="avatar" src="/assets/img/lyrels-avatar.jpg" alt="" width="30" height="30">
         Lyrels
       </a>
-      <nav class="nav" aria-label="Main">
+      <nav class="nav policy-nav" aria-label="Main" data-aria-label-zh="主导航" data-aria-label-zh-tw="主要導覽" data-aria-label-ja="メインナビゲーション" data-aria-label-ko="기본 탐색">
         <a href="/flitdo/">Flitdo</a>
-        <a class="hide-sm" href="/flitdo/privacy/"><span class="en">Privacy</span><span class="zh">隐私政策</span></a>
-        <button class="lang-toggle" type="button" hidden>中文</button>
+        <a class="hide-sm" href="/flitdo/privacy/"><span class="en">Privacy</span><span class="zh">隐私政策</span><span class="zh-tw">隱私權政策</span><span class="ja">プライバシー</span><span class="ko">개인정보</span></a>
+        <details class="policy-language-menu">
+          <summary class="lang-toggle"><span class="en" lang="en">English</span><span class="zh" lang="zh-CN">简体中文</span><span class="zh-tw" lang="zh-TW">繁體中文</span><span class="ja" lang="ja">日本語</span><span class="ko" lang="ko">한국어</span></summary>
+          <div class="policy-languages">
+            <a href="?lang=en" lang="en" hreflang="en">English</a>
+            <a href="?lang=zh-CN" lang="zh-CN" hreflang="zh-CN">简体中文</a>
+            <a href="?lang=zh-TW" lang="zh-TW" hreflang="zh-TW">繁體中文</a>
+            <a href="?lang=ja" lang="ja" hreflang="ja">日本語</a>
+            <a href="?lang=ko" lang="ko" hreflang="ko">한국어</a>
+          </div>
+        </details>
       </nav>
     </div>
   </header>
@@ -31,11 +43,11 @@
   <main id="main" class="not-found">
     <div class="wrap">
       <div class="code">404</div>
-      <h1><span class="en">This page doesn’t exist</span><span class="zh">这个页面不存在</span></h1>
-      <p><span class="en">The link may be broken, or the page may have moved.</span><span class="zh">链接可能有误，或者页面已被移动。</span></p>
+      <h1><span class="en">This page doesn’t exist</span><span class="zh">这个页面不存在</span><span class="zh-tw">找不到這個頁面</span><span class="ja">ページが見つかりません</span><span class="ko">페이지를 찾을 수 없습니다</span></h1>
+      <p><span class="en">The link may be broken, or the page may have moved.</span><span class="zh">链接可能有误，或者页面已被移动。</span><span class="zh-tw">連結可能有誤，或頁面已移至其他位置。</span><span class="ja">リンクが切れているか、ページが移動した可能性があります。</span><span class="ko">링크가 잘못되었거나 페이지가 이동했을 수 있습니다.</span></p>
       <div class="actions">
-        <a class="btn btn-primary" href="/"><span class="en">Go to the home page</span><span class="zh">返回首页</span></a>
-        <a class="btn btn-ghost" href="/flitdo/privacy/"><span class="en">Flitdo Privacy Policy</span><span class="zh">Flitdo 隐私政策</span></a>
+        <a class="btn btn-primary" href="/"><span class="en">Go to the home page</span><span class="zh">返回首页</span><span class="zh-tw">返回首頁</span><span class="ja">ホームへ戻る</span><span class="ko">홈으로 이동</span></a>
+        <a class="btn btn-ghost" href="/flitdo/privacy/"><span class="en">Flitdo Privacy Policy</span><span class="zh">Flitdo 隐私政策</span><span class="zh-tw">Flitdo 隱私權政策</span><span class="ja">Flitdo プライバシーポリシー</span><span class="ko">Flitdo 개인정보 처리방침</span></a>
       </div>
     </div>
   </main>

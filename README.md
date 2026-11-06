@@ -14,14 +14,15 @@ Plain static HTML and CSS — no build step, no frameworks, no external requests
 cookies or analytics). `.nojekyll` tells GitHub Pages to publish the files as they are.
 
 ## Languages
-The brand and product pages are bilingual (English and Simplified Chinese). Text comes in pairs:
-`<span class="en">…</span><span class="zh">…</span>`; the `data-lang` attribute on `<html>` decides
-which one shows. The language is picked from `?lang=en|zh`, then the visitor's saved choice, then the
-browser language. Without JavaScript the English text is shown.
+The public site supports English, Simplified Chinese, Traditional Chinese, Japanese and Korean.
+The header dropdown saves one language choice for the brand home, product, privacy and 404 pages.
+Links with `?lang=` take precedence, followed by the saved choice and then the browser language.
+The older `?lang=zh` URL still selects Simplified Chinese.
 
-The Flitdo privacy policy has five static language pages. Its main URL uses the requested language,
-then the saved choice, then the browser language, with English as the fallback. The language links
-also work without JavaScript. The older `?lang=zh` URL still opens Simplified Chinese.
+The brand home, product and 404 pages keep their translations in the HTML. The `data-lang`
+attribute on the root selects the visible text, with English as the fallback without JavaScript.
+The privacy policy has separate static URLs for each language and its language links also work
+without JavaScript.
 
 ## Structure
 ```
@@ -31,7 +32,8 @@ flitdo/privacy/            Flitdo privacy policy (EN, 简体中文, 繁體中文
 flitdo/review/             review access: decrypting page and the encrypted certificate
 404.html
 assets/css/site.css        all styles; colours mirror the Flitdo app palette
-assets/js/site.js          language toggle, header hairline, table-of-contents highlight
+assets/js/language.js      shared language preference and header dropdown
+assets/js/site.js          header hairline and table-of-contents highlight
 assets/img/                Lyrels avatar (JPEG/PNG sizes); Flitdo icon (SVG, 512 px PNG for Play, touch icon)
 robots.txt, sitemap.xml
 ```

@@ -1,35 +1,5 @@
-// Lyrels progressive enhancements. Bilingual pages show English without this file.
+// Lyrels progressive enhancements shared by the public pages.
 (function () {
-  var root = document.documentElement;
-  var KEY = 'lyrels-lang';
-
-  function setLang(lang, remember) {
-    root.setAttribute('data-lang', lang);
-    root.lang = lang === 'zh' ? 'zh-CN' : 'en';
-    var title = document.querySelector('meta[name="title-' + lang + '"]');
-    if (title) document.title = title.content;
-    var btn = document.querySelector('.lang-toggle');
-    if (btn) {
-      btn.textContent = lang === 'zh' ? 'EN' : '中文';
-      btn.setAttribute('aria-label', lang === 'zh' ? 'Switch to English' : '切换到中文');
-    }
-    if (remember) {
-      try { localStorage.setItem(KEY, lang); } catch (e) { /* storage unavailable: choice lasts this page */ }
-    }
-  }
-
-  if (!root.hasAttribute('data-static-lang')) {
-    setLang(root.getAttribute('data-lang') === 'zh' ? 'zh' : 'en', false);
-
-    var toggle = document.querySelector('.lang-toggle');
-    if (toggle) {
-      toggle.hidden = false;
-      toggle.addEventListener('click', function () {
-        setLang(root.getAttribute('data-lang') === 'zh' ? 'en' : 'zh', true);
-      });
-    }
-  }
-
   // Header hairline once the page scrolls.
   var header = document.querySelector('.site-header');
   if (header) {
