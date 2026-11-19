@@ -91,28 +91,26 @@
         </aside>
 
         <article class="prose">
+          <p>This privacy policy describes how <strong>Flitdo</strong> (the “App”), an Android and Windows to-do app developed and published by <strong>Lyrels</strong> (“Lyrels”, “we”, “us” or “our”), handles your information. It applies to the App and to this website.</p>
           <h2 id="cloud-sync">Optional cloud sync on Android and Windows</h2>
-          <p>Edit tasks locally without a cloud account, or connect a Lyrels account in Cloud Sync to merge this device’s tasks with your other connected devices. Sync-enabled Android builds request Internet and network-state access. Voice input, if used, is handled separately by your device’s recognition provider, which may process audio online.</p>
+          <p>Edit tasks locally without a cloud account, or connect a Lyrels account in Cloud Sync to merge this device’s tasks with your other connected devices. Sync-enabled builds use Internet and network-state access for cloud sync. Voice input, if used, is handled separately by your device’s recognition provider, which may process audio online.</p>
           <p>Devices encrypt tasks, tags, subtasks, recurrence and reminder information before upload. Android can also sync supported preferences and custom sounds or images. Windows syncs the task document and preserves the Android settings in it. The service keeps encrypted snapshots, including the previous revision. Devices use a recovery code to unlock keys. Keep that code private.</p>
           <p>Lyrels processes your username, a password verifier, device names and public keys, encrypted key envelopes, session and recovery verification data, IP address, connection times and snapshot size and revision to authenticate devices, prevent abuse and deliver updates. Cloudflare processes connections to our service. If you link Google, we process a verified Google identifier and, where provided, email. Google Play handles payments. Subscription verification, where enabled, uses the purchase token and subscription status.</p>
           <p>Pausing sync stops transfers from that device. Revoking a device stops future access but does not erase its local copies. Delete the cloud account in Cloud Sync settings to remove the account and snapshots from the active service. Local copies and exports remain on your devices. Contact Lyrels using the address below for privacy requests.</p>
-          <h2>Earlier Android versions without Cloud Sync</h2>
-          <p>The following sections describe the local-only Android releases, local features, Google Play and contact details. The cloud processing described above applies to sync-enabled builds.</p>
-          <p>This privacy policy describes how <strong>Flitdo</strong> (the “App”), an Android to-do app developed and published by <strong>Lyrels</strong> (“Lyrels”, “we”, “us” or “our”), handles your information. It applies to the App as distributed through Google Play and to this website.</p>
 
           <div class="summary" style="margin-top:28px">
             <h2 id="summary">In short</h2>
             <ul>
-              <li>Flitdo does <strong>not collect, transmit, sell or share</strong> any personal or sensitive user data.</li>
-              <li>Everything you enter is stored <strong>only on your device</strong>. There is no account or sign-up. The one exception is your choice: if you turn on two-way calendar sync, the title, date and time of your tasks with a date are written to the calendar you chose (section 4).</li>
+              <li>Flitdo does <strong>not sell or share</strong> any personal or sensitive user data, and tasks synced through optional Cloud Sync are <strong>end-to-end encrypted</strong> on your devices before upload.</li>
+              <li>By default, everything you enter is stored <strong>only on your device</strong> without an account or sign-up. You can optionally turn on end-to-end encrypted Cloud Sync across your devices, or two-way calendar sync with a device calendar you choose (section 4).</li>
               <li>The App contains <strong>no advertising, analytics or tracking</strong>, and no third-party SDKs that collect data.</li>
-              <li>The App <strong>does not request Internet access</strong>, so it cannot send your data to us or to anyone else.</li>
-              <li><strong>Flitdo Pro</strong> is an optional subscription sold through Google Play. Google handles the payment; we never see your card details or your Google account.</li>
+              <li>The App uses network access <strong>only when you sign in to optional Cloud Sync</strong>.</li>
+              <li><strong>Flitdo Pro</strong> is an optional subscription sold through Google Play. Google handles the payment; we never see your card details.</li>
             </ul>
           </div>
 
           <h2 id="collect">1. Information we collect</h2>
-          <p>We do not collect any information through the App. Lyrels does not operate any server for the App, and the App has no way to send data off your device: it does not request Android’s Internet permission and contains no advertising, analytics, crash-reporting or other third-party SDKs that collect data. We never receive, see, sell or share your tasks or anything else you enter in the App. If you subscribe to Flitdo Pro, Google Play handles the purchase and gives us only the order details described in section 8. If you turn on two-way calendar sync, the App writes the title, date and time of your tasks with a date into the calendar on your device, and your calendar account may then sync them, as described in section 4.</p>
+          <p>When you use Flitdo without Cloud Sync, no data leaves your device. The App contains no advertising, analytics, crash-reporting or other third-party SDKs that collect data. When you opt in to Cloud Sync, your tasks and settings are encrypted on your device with keys held only by your devices; we process only the account, device and encrypted snapshot metadata described under <strong>Optional cloud sync on Android and Windows</strong> above, and we cannot read your tasks. If you subscribe to Flitdo Pro, Google Play handles the purchase and gives us only the order details described in section 8 (and if you bind a subscription to Cloud Sync, the purchase token and subscription status are used to verify entitlement). If you turn on two-way calendar sync, the App writes the title, date and time of your tasks with a date into the calendar on your device, and your calendar account may then sync them, as described in section 4.</p>
 
           <h2 id="device">2. Information stored on your device</h2>
           <p>To work, the App stores the following in its private storage on your device. This data stays on your device and is not accessible to us.</p>
@@ -130,7 +128,7 @@
           <p>Flitdo recognises dates and times in what you type using rules built into the App. This processing happens entirely on your device. No AI service, server or network connection is involved, and your text is never sent anywhere.</p>
 
           <h2 id="calendars">4. Device calendars</h2>
-          <p>Calendar features are optional and stay off until you set them up. Flitdo works only with the calendars already on your device through Android’s calendar storage. It does not sign in to Google, Microsoft or any other account, and it has no Internet access of its own.</p>
+          <p>Calendar features are optional and stay off until you set them up. Flitdo works only with the calendars already on your device through Android’s calendar storage and does not sign in to your calendar provider directly.</p>
           <ul>
             <li><strong>Showing events.</strong> With calendar access, Flitdo shows the events for the day you are viewing from the selected account’s visible calendars. You can also choose to show them in the home screen widget. Flitdo may ask Android to refresh the account. In Show events only mode, Flitdo reads and displays events without creating tasks.</li>
             <li><strong>Two-way sync for tasks.</strong> After you confirm two-way sync, Flitdo writes the title, date and time of dated tasks to the selected calendar. Non-repeating events starting today or later in that calendar become tasks without reminders. Flitdo stores their titles, dates and start times as ordinary task data, which is included in task backups. Changes to those fields sync both ways. Completion, reminders, repeat rules, tags and subtasks stay in Flitdo. Deleting or stopping sync preserves the other side’s records. Flitdo retains the device links when you stop so it can reuse them if you reconnect.</li>
@@ -153,8 +151,9 @@
             <li><strong>Run at startup</strong> — to restore your reminders (and the bubble, if you enabled it) after the device restarts or the App is updated.</li>
             <li><strong>Calendar</strong> — only if you set up calendar sync: to show events from the account you choose and, if you turn on two-way sync, to keep your tasks in step with their events (section 4). Android asks for it when you first set calendar sync up.</li>
             <li><strong>Google Play billing</strong> — to let you buy and manage Flitdo Pro through Google Play. The App uses it only to talk to the Google Play Store app on your device; versions that offer no purchase do not use it.</li>
+            <li><strong>Internet &amp; network state</strong> — used only when you opt in to Cloud Sync or sign in to your Lyrels account.</li>
           </ul>
-          <p>Flitdo does not request access to the Internet, your location, contacts, camera, microphone, phone, SMS or device storage, and does not use the Android advertising ID.</p>
+          <p>Flitdo does not request access to your location, contacts, camera, microphone, phone, SMS or general device storage, and does not use the Android advertising ID.</p>
 
           <h2 id="backup">7. Backup, export and device transfer</h2>
           <p>If backup is turned on for your device, Android may include the App’s tasks (with their tags and subtasks), settings and imported bubble icons in the backup that it stores in your own Google account, and may copy them to a new device during device-to-device transfer. These backups are created and stored by Google under your account and are governed by the <a href="https://policies.google.com/privacy" rel="noopener">Google Privacy Policy</a>; Lyrels has no access to them. Calendar choices and links and the subscription record are not included. You can turn backup off at any time in your device’s system settings.</p>
@@ -175,10 +174,10 @@
             <li>Backup and export files you saved stay where you saved them until you delete them.</li>
             <li>Events Flitdo wrote to a calendar stay in that calendar until you delete them there; stopping sync or uninstalling Flitdo does not remove them.</li>
           </ul>
-          <p>The App sends us nothing, so we hold no data from it. If you subscribe, the order details Google Play provides stay in Google Play and in our accounting records for as long as tax and accounting rules require. Uninstalling the App removes the subscription record on your device; the subscription itself stays with your Google account until you cancel it.</p>
+          <p>Unless you turn on Cloud Sync, we hold no task or account data from the App. If you use Cloud Sync, you can delete your cloud account and encrypted snapshots at any time in Cloud Sync settings. If you subscribe, the order details Google Play provides stay in Google Play and in our accounting records for as long as tax and accounting rules require. Uninstalling the App removes the subscription record on your device; the subscription itself stays with your Google account until you cancel it.</p>
 
           <h2 id="security">10. Security</h2>
-          <p>The App keeps your data in its private storage, which Android isolates from other apps. Because the App does not connect to the Internet, your data is never transmitted over a network by the App. We recommend protecting your device with a screen lock.</p>
+          <p>The App keeps your data in its private storage, which the operating system isolates from other apps. When Cloud Sync is used, all task data is encrypted end-to-end on your device before transmission over TLS. We recommend protecting your device with a screen lock.</p>
 
           <h2 id="children">11. Children</h2>
           <p>Flitdo is a general-audience productivity app and is not directed at children. It does not collect personal information from anyone, including children under the age of 13.</p>
