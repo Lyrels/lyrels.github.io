@@ -259,12 +259,11 @@ html[data-lang="zh-tw"] .hero h1 { letter-spacing: -0.01em; max-width: 13em; }
 
 .contact {
   display: flex; align-items: center; justify-content: space-between; gap: 32px; flex-wrap: wrap;
-  background: var(--ink); color: var(--paper); border-radius: 28px; padding: 48px;
+  background: var(--surface); color: var(--ink); border: 1px solid var(--line-soft); border-radius: 28px;
+  padding: 48px; box-shadow: var(--shadow);
 }
 .contact h2 { font-size: clamp(26px, 3.4vw, 36px); }
-.contact p { color: color-mix(in srgb, var(--paper) 70%, transparent); margin-top: 10px; }
-.contact .btn-primary { background: var(--paper); color: var(--ink); }
-.contact .btn-primary:hover { background: color-mix(in srgb, var(--paper) 88%, var(--ink)); }
+.contact p { color: var(--muted); margin-top: 10px; }
 
 /* ---------- Footer ---------- */
 
